@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
+
+<head>
+    {{- partial "head.html" . }}
+</head>
+
+<body class="stretched">
+
+    <!-- Document Wrapper
+    ============================================= -->
+    <div id="wrapper" class="clearfix">
+    
+    {{- partial "header.html" . }}
+    {{- block "main" . }}{{ end }}
+    {{- partial "footer.html" . }}
+
+    </div><!-- #wrapper end -->
+
+    <!-- Go To Top
+    ============================================= -->
+    <div id="gotoTop" class="icon-angle-up"></div>
+
+    <!-- JavaScripts
+    ============================================= -->
+    <script src="/js/jquery.js"></script>
+    <script src="/js/plugins.min.js"></script>
+
+    <!-- Footer Scripts
+    ============================================= -->
+    <script src="/js/functions.js"></script>
+
+    <script>
+    $(function() {
+        $( "#side-navigation" ).tabs({ show: { effect: "fade", duration: 400 } });
+    });
+</script>
+
+</body>
+
