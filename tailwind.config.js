@@ -25,6 +25,9 @@ module.exports = {
         sans: "Poppins, sans-serif",
         serif: ['PT Serif', 'serif'],
       },
+      letterSpacing: {
+        widest: '.25em',
+      },      
       // fontSize: {
       //   '4xl': ['2.375rem', '1.1'],
       //   '5xl': ['3rem', '1.1'],
