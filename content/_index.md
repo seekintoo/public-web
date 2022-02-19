@@ -84,4 +84,9 @@ blocks:
 #       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 #     image: "https://dummyimage.com/50x50/bae7fd"
 
+- block: cta
+  text: Are you experiencing a security incident or have you been breached? Call us now. 
+  phone: 1-800-876-1234
+
+
 ---
