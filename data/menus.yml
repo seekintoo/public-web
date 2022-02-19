@@ -42,18 +42,45 @@ navbar_right:
     url: "#"
 
 footer:
-- name: Terms
-  url: "/terms/"
-- name: Privacy
-  url: "/privacy/"
-- name: Cookies
-  url: "/cookies/"
-- name: Disclosures
-  url: "/disclosures/"
+- heading: What we do
+  menu:
+  - name: CYBERSOC
+    url: "/cybersoc"
+  - name: Penetration Testing
+    url: "/penetration-testing/"
+  - name: Risk & Advisory
+    url: "/risk-advisory/"
 
+- heading: How we do it
+  menu:
+  - name: Lorem umen
+    url: "#"
+  - name: Ipsum dolor
+    url: "#"
+  - name: Dolorem 
+    url: "#"
+  - name: Loremus
+    url: "#"
 
+- heading: Resources
+  menu:
+  - name: Terms
+    url: "/terms/"
+  - name: Privacy
+    url: "/privacy/"
+  - name: Cookies
+    url: "/cookies/"
+  - name: Disclosures
+    url: "/disclosures/"
 
-  
-
-
+- heading: Company
+  menu:
+  - name: About Us
+    url: "/about-us/"
+  - name: Team
+    url: "/team/"
+  - name: Careers
+    url: "/careers/"
+  - name: Contact
+    url: "/contact/"
 
