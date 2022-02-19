@@ -1,0 +1,59 @@
+---
+social:
+  linkedin: "#"
+  twitter: "#"
+  facebook: "#"
+
+navbar_center:
+- name: About Us
+  url: "/"
+  children: []
+- name: Services
+  url: ""
+  children:
+  - name: CYBERSOC
+    url: "/cybersoc"
+    icon: shield
+    desc: Lorem ipsum doloren sulum talem
+  - name: Penetration Testing
+    url: "/penetration-testing/"
+    icon: lock
+    desc: Lorem ipsum doloren sulum talem
+  - name: Risk & Advisory
+    url: "/risk-advisory/"
+    icon: exclamation
+    desc: Lorem ipsum doloren sulum talem
+- name: Team
+  url: "/team/"
+  children: []
+- name: Careers
+  url: "/careers/"
+  children: []
+- name: Contact
+  url: "/contact/"
+  children: []
+
+navbar_right:
+  secondary:
+    name: Customer Portal
+    url: "#"
+  primary:
+    name: Get Started
+    url: "#"
+
+footer:
+- name: Terms
+  url: "/terms/"
+- name: Privacy
+  url: "/privacy/"
+- name: Cookies
+  url: "/cookies/"
+- name: Disclosures
+  url: "/disclosures/"
+
+
+
+  
+
+
+

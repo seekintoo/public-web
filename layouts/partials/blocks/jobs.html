@@ -1,0 +1,53 @@
+<div class="py-16 lg:py-24 bg-gradient-to-b from-white to-blue-50">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    {{ if or .heading .subheading }}
+      <div class="text-center mb-10">
+        {{ with .heading }}
+          <h2 class="text-4xl font-semibold leading-tight text-primary md:text-5xl">{{ . }}</h2>
+        {{ end }}
+        {{ with .subheading }}
+          <p class="mt-6 max-w-2xl text-xl text-slate-500 mx-auto">{{ . }}</p>
+        {{ end }}
+      </div>
+    {{ end }}
+
+    {{ with .text }}
+      <div class="prose mx-auto">{{ . | markdownify }}</div>
+    {{ end }}
+
+    <div class="grid md:gap-y-6 mt-16">
+      {{ range .jobs }}
+        <div class="border border-slate-100 rounded-xl bg-white">
+          <div class="p-7 sm:flex items-center justify-center">
+            <div>
+              <h3 class="text-2xl font-semibold text-primary">{{ .heading }}</h3>
+              {{ if .info }}
+                <div class="mt-1 flex space-x-6 text-sm">
+                  {{ range .info }}
+                    <div class="text-slate-400">{{ . }}</div>
+                  {{ end }}
+                </div>
+              {{ end }}              
+              {{ with .description }}
+                <div class="mt-2 leading-relaxed text-slate-600">{{ . }}</div>
+              {{ end }}
+              {{ if .labels }}
+                <div class="mt-3 flex space-x-3 text-xs">
+                  {{ range .labels }}
+                    <div class="bg-blue-50 text-blue-400 py-1 px-2 rounded">{{ . }}</div>
+                  {{ end }}
+                </div>
+              {{ end }}
+            </div>
+            <div>
+              <a class="sm:ml-6 lg:ml-16 mt-6 sm:mt-0 whitespace-nowrap inline-flex items-center justify-center px-5 py-2.5 border border-transparent rounded-md shadow text-sm font-medium text-white bg-secondary hover:bg-secondary-dark w-full sm:w-fit" href="{{ .url }}">Apply</a>
+            </div>    
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+

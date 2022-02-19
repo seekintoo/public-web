@@ -1,0 +1,13 @@
+/* assets */ 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+mark {
+  background-color: transparent;
+  @apply text-secondary-300;
+}

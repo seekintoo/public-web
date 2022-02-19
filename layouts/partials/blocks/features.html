@@ -1,0 +1,35 @@
+<div class="bg-secondary-50">
+  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-24">
+    {{ range $i,$p := .features }}
+      <div id="{{ .heading | urlize }}" class="grid gap-10 row-gap-10 lg:grid-cols-2{{if ne $i 0}} mt-12 lg:mt-24{{end}}">
+        <div class="flex flex-col justify-center">
+          <div class="max-w-xl{{if (modBool $i 2)}} lg:ml-8{{end}}">
+            <h2 class="max-w-lg mb-6 text-4xl font-semibold leading-tight text-primary sm:text-5xl">{{ .heading }}</h2>
+            <p class="text-lg sm:text-xl text-slate-700 leading-normal">{{ .text }}</p>
+            {{ if .list }}
+              <ul class="space-y-4 mt-7 text-slate-700">
+                {{ range .list }}
+                  <li class="flex items-center text-lg">
+                    <svg class="w-6 h-6 flex-none fill-secondary-100 stroke-secondary-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="11" />
+                      <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                    </svg>
+                    <p class="ml-3">{{ . }}</p>
+                  </li>
+                {{ end }}
+              </ul>
+            {{ end }}  
+            {{ if .button.url }}
+              <div class="mt-7">
+                <a href="{{ .button.url }}" class="inline-flex px-8 py-4 rounded-md shadow text-base lg:text-lg font-medium text-white bg-primary-500 hover:bg-primary-600"> {{ .button.text }} </a>
+              </div>
+            {{ end }}                      
+          </div>
+        </div>
+        <div{{if (modBool $i 2)}} class="lg:order-first"{{end}}>
+          <img class="w-full rounded-lg drop-shadow-lg" src="{{ .image | absURL }}" alt="{{ .heading }}" />
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</div>

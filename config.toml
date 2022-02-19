@@ -1,3 +1,13 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'Seekintoo Ltd. Site Title'
+baseURL = ""
+languageCode = "en-us"
+title = "Seekintoo Ltd. Site Title"
+paginate = 2
+
+[params]
+description = "Site default description"
+logo = "/images/logo.png"
+logo_light = "/images/logo-light.png"
+copyright = "Copyright © 2022 Seekintoo"
+
+# banner_text = "Excepteur sint occaecat cupidatat proident officia deserunt"
+# banner_url = "#"

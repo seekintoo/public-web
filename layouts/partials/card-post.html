@@ -1,0 +1,19 @@
+<div class="relative border border-slate-100 rounded-xl h-full transition duration-100 ease-in-out hover:shadow-xl bg-white">
+  {{ if .Params.image }}
+    <div class="text-center">
+      <img class="inline-block rounded-t-xl" src="{{ .Params.image | absURL }}" alt="{{ .Title }}">
+    </div>
+  {{ end }}
+  <div class="p-6 pt-5">
+    <h3 class="leading-6 text-xl font-semibold text-primary">{{ .Title }}</h3>
+    {{ with .Params.description }}
+      <div class="mt-2 leading-6 text-slate-700">{{ . }}</div>
+    {{ end }}
+    <div class="mt-2 text-sm text-slate-400">
+      <time datetime="2020-03-16">
+        {{ dateFormat "January 02, 2006" .Date }}
+      </time>
+    </div>    
+  </div>
+  <a class="absolute inset-0" href="{{ .Params.medium }}" title="{{ .Title }}" target="_blank" rel="noopener noreferrer"></a>
+</div>
