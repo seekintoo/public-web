@@ -22,7 +22,7 @@ blocks:
     text: |- 
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    image: "https://dummyimage.com/600x600"
+    image: "https://dummyimage.com/600x600/999/999"
     list:
     - Lorem ipsum dolor sit amet
     - Lorem ipsum dolor sit amet
@@ -30,7 +30,7 @@ blocks:
     text: |- 
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    image: "https://dummyimage.com/600x600"
+    image: "https://dummyimage.com/600x600/999/999"
     button:
       text: Get Started Today
       url: "#"
