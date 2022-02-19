@@ -4,7 +4,7 @@
     <div class="xl:grid xl:grid-cols-3 xl:gap-8">
       <div class="space-y-8 xl:col-span-1">
         <img class="h-16 w-auto" src="{{ .Site.Params.logo_light | absURL }}" alt="{{ .Site.Title }}">
-        <p class="text-gray-300 text-base">Making the world a better place through constructing elegant hierarchies.</p>
+        <p class="text-gray-300 text-base xl:mr-10">{{ .Site.Params.description }}</p>
         <div class="flex space-x-5">
           {{ with .Site.Data.menus.social.twitter }}
             <a href="#" class="text-violet-400 hover:text-violet-300">

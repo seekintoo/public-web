@@ -3513,6 +3513,10 @@ mark {
     margin-top: 0px;
   }
 
+  .xl\:mr-10 {
+    margin-right: 2.5rem;
+  }
+
   .xl\:grid {
     display: grid;
   }
