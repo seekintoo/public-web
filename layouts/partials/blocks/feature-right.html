@@ -1,0 +1,29 @@
+<div class="relative bg-white pt-16 pb-32 overflow-hidden">
+  <div class="relative">
+    <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+      <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
+        <div>
+          <div>
+            {{ with .superheading }}
+              <p class="text-base font-semibold tracking-widest text-indigo-600 uppercase mb-2">{{ . }}</p>
+            {{ end }}
+            <h2 class="text-4xl font-bold text-gray-900 tracking-tight sm:text-5xl">{{ .heading }}</h2>
+            {{ with .subheading }}
+              <p class="mt-5 max-w-prose mx-auto text-xl text-gray-500">{{ . }}</p>
+            {{ end }}
+            {{ if .button.url }}
+              <div class="mt-7">
+                <a href="{{ .button.url }}" class="inline-flex px-8 py-4 rounded-md shadow text-base lg:text-lg font-medium text-white bg-primary-500 hover:bg-primary-600"> {{ .button.text }} </a>
+              </div>
+            {{ end }}                      
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 sm:mt-16 lg:mt-0">
+        <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+          <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none" src="{{ .image | absURL }}" alt="{{ .heading }}">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

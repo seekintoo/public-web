@@ -14,6 +14,12 @@ blocks:
     url: "#"
   image: "https://dummyimage.com/1000x500"
 
+- block: feature-centered
+  superheading: Security
+  heading: Elit fugiat veniam occaecat
+  subheading: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
+  image: "https://dummyimage.com/1220x900"
+
 - block: features
   heading: Challenges
   subheading: Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.
@@ -21,7 +27,7 @@ blocks:
   - heading: Anim aute id magna
     text: |- 
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
     image: "https://dummyimage.com/600x600/999/999"
     list:
     - Lorem ipsum dolor sit amet
@@ -33,6 +39,39 @@ blocks:
     image: "https://dummyimage.com/600x600/999/999"
     button:
       text: Get Started Today
+      url: "#"
+
+- block: feature-right
+  superheading: Security
+  heading: Elit fugiat veniam occaecat
+  subheading: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
+  image: "https://dummyimage.com/2500x1500"
+  button:
+    text: Learn more
+    url: "#"
+
+- block: cards-3
+  superheading: Security
+  heading: Elit fugiat veniam occaecat
+  subheading: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
+  cards:
+  - heading: Lorem ipsum dolorem
+    text: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
+    icon: "https://dummyimage.com/70x70"
+    button:
+      text: Learn More
+      url: "#"
+  - heading: Lorem ipsum dolorem
+    text: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
+    icon: "https://dummyimage.com/70x70"
+    button:
+      text: Learn More
+      url: "#"
+  - heading: Lorem ipsum dolorem
+    text: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
+    icon: "https://dummyimage.com/70x70"
+    button:
+      text: Learn More
       url: "#"
 
 # - block: logos
