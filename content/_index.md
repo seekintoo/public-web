@@ -20,6 +20,26 @@ blocks:
   subheading: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
   image: "https://dummyimage.com/1220x900"
 
+- block: cards-2
+  superheading: Security
+  heading: Elit fugiat veniam occaecat
+  subheading: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
+  cards:
+  - heading: Lorem ipsum dolorem occaecat irure lorem occaecat
+    superheading: Occaecat irure qui lorem cupidatat commodo
+    text: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
+    icon: "https://dummyimage.com/70x70"
+    button:
+      text: Learn More
+      url: "#"
+  - heading: Lorem ipsum dolorem occaecat irure lorem occaecat
+    superheading: Elit fugiat veniam occaecat irure qui lorem 
+    text: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
+    icon: "https://dummyimage.com/70x70"
+    button:
+      text: Learn More
+      url: "#"
+
 - block: features
   heading: Challenges
   subheading: Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.
@@ -41,6 +61,12 @@ blocks:
       text: Get Started Today
       url: "#"
 
+- block: cta-2
+  text: Anim aute id magna aliqua ad ad non deserunt sunt irure lorem.
+  button:
+    text: Get Started
+    url: "#"
+
 - block: feature-right
   superheading: Security
   heading: Elit fugiat veniam occaecat
@@ -49,32 +75,6 @@ blocks:
   button:
     text: Learn more
     url: "#"
-
-- block: cta-2
-  text: Anim aute id magna aliqua ad ad non deserunt sunt irure lorem.
-  button:
-    text: Get Started
-    url: "#"
-
-- block: cards-2
-  superheading: Security
-  heading: Elit fugiat veniam occaecat
-  subheading: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
-  cards:
-  - heading: Lorem ipsum dolorem occaecat irure lorem occaecat
-    superheading: Occaecat irure qui lorem cupidatat commodo
-    text: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
-    icon: "https://dummyimage.com/70x70"
-    button:
-      text: Learn More
-      url: "#"
-  - heading: Lorem ipsum dolorem occaecat irure lorem occaecat
-    superheading: Elit fugiat veniam occaecat irure qui lorem 
-    text: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
-    icon: "https://dummyimage.com/70x70"
-    button:
-      text: Learn More
-      url: "#"
 
 - block: cards-3
   superheading: Security
