@@ -21,6 +21,9 @@ module.exports = {
           900: "#1F1042",
         },
       },
+      borderRadius: {
+        '4xl': '3rem',
+      },    
       fontFamily: {
         sans: "Poppins, sans-serif",
         serif: ['PT Serif', 'serif'],
