@@ -1,5 +1,5 @@
-<div class="bg-white">
-  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-24">
+<div class="bg-white px-4 sm:px-6 lg:px-8">
+  <div class="py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-6xl md:px-24 lg:px-0 lg:py-24">
     {{ range $i,$p := .features }}
       <div id="{{ .heading | urlize }}" class="grid gap-10 row-gap-10 lg:grid-cols-2{{if ne $i 0}} mt-12 lg:mt-24{{end}}">
         <div class="flex flex-col justify-center">
