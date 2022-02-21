@@ -50,6 +50,12 @@ blocks:
     text: Learn more
     url: "#"
 
+- block: cta-2
+  text: Anim aute id magna aliqua ad ad non deserunt sunt irure lorem.
+  button:
+    text: Get Started
+    url: "#"
+
 - block: cards-2
   superheading: Security
   heading: Elit fugiat veniam occaecat
