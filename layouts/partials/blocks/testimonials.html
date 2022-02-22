@@ -1,0 +1,166 @@
+<div class="px-16">
+  <div class="max-w-6xl mx-auto">
+    <div class="relative z-[99]">
+      <div x-data="carousel" class="flex flex-col w-full">
+        <div
+          x-bind="container"
+          class="flex bg-secondary-500 p-8 pb-3 md:p-12 md:pb-6 rounded-lg rounded-br-4xl shadow-lg relative"
+          tabindex="0"
+          role="region"
+          aria-labelledby="carousel-label"
+        >
+          <button
+            x-on:click="previous"
+            class="text-6xl text-slate-300 hover:text-slate-600 absolute -left-14 top-[calc(50%-1.5rem)]"
+          >
+            <span aria-hidden="true">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </span>
+
+            <span class="sr-only">Skip to previous slide</span>
+          </button>
+
+          <span id="carousel-content-label" class="sr-only" hidden=""
+            >Carousel</span
+          >
+
+          <ul
+            x-ref="slider"
+            tabindex="0"
+            role="listbox"
+            aria-labelledby="carousel-content-label"
+            class="flex w-full overflow-x-scroll snap-x snap-mandatory pb-6"
+          >
+            {{ range .testimonials }}
+            <li
+              class="snap-start w-full shrink-0 flex flex-col items-center justify-center"
+              role="option"
+            >
+              <div class="lg:grid lg:grid-cols-3 lg:gap-8 items-center">
+                <div>
+                  <img
+                    src="{{ .image | absURL }}"
+                    alt="{{ .name }}" 
+                    class="rounded-md shadow-xl"
+                  />
+                </div>
+                <div class="mt-12 lg:m-0 lg:col-span-2 lg:pl-4">
+                  <blockquote>
+                    <div>
+                      <svg
+                        class="h-12 w-12 text-primary-500"
+                        fill="currentColor"
+                        viewBox="0 0 32 32"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"
+                        />
+                      </svg>
+                      <p
+                        class="mt-6 text-base md:text-2xl font-medium text-white leading-normal md:leading-normal"
+                      >
+                        {{ .text }}
+                      </p>
+                    </div>
+                    <footer class="mt-6">
+                      <p
+                        class="text-base md:text-xl font-bold text-primary-500"
+                      >
+                        {{ .name }}
+                      </p>
+                      <p class="text-base text-slate-300">
+                        {{ .title }}
+                      </p>
+                    </footer>
+                  </blockquote>
+                </div>
+              </div>
+            </li>
+            {{ end }}
+          </ul>
+
+          <button
+            x-on:click="next"
+            class="text-6xl text-slate-300 hover:text-slate-600 absolute -right-14 top-[calc(50%-1.5rem)]"
+          >
+            <span aria-hidden="true">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </span>
+
+            <span class="sr-only">Skip to next slide</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("alpine:init", () => {
+        Alpine.data("carousel", () => ({
+          advance: 1,
+          next() {
+            this.to((current, offset) => current + offset * this.advance);
+          },
+          previous() {
+            this.to((current, offset) => current - offset * this.advance);
+          },
+          to(strategy) {
+            let slider = this.$refs.slider;
+            let current = slider.scrollLeft;
+            let offset = slider.firstElementChild.getBoundingClientRect().width;
+            slider.scrollTo({
+              left: strategy(current, offset),
+              behavior: "smooth",
+            });
+          },
+          focusableWhenVisible: {
+            "x-intersect:enter"() {
+              this.$el.removeAttribute("tabindex");
+            },
+            "x-intersect:leave"() {
+              this.$el.setAttribute("tabindex", "-1");
+            },
+          },
+        }));
+
+        Alpine.bind("container", () => ({
+          ["x-on:keydown.right"]() {
+            this.next();
+          },
+          ["x-on:keydown.left"]() {
+            this.previous();
+          },
+          ["tabindex"]: "0",
+          ["role"]: "region",
+          ["aria-labelledby"]: "carousel-label",
+        }));
+      });
+    </script>
+  </div>
+</div>
