@@ -71,7 +71,7 @@ blocks:
     superheading: Security
     heading: Elit fugiat veniam occaecat
     subheading: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
-    image: "https://dummyimage.com/2500x1500"
+    image: "https://dummyimage.com/2500x2000/999/999"
     button:
       text: Learn more
       url: "#"

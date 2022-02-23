@@ -2261,6 +2261,16 @@ select {
   padding-right: 4rem;
 }
 
+.py-24 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.py-32 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
 .pt-8 {
   padding-top: 2rem;
 }
@@ -3084,6 +3094,10 @@ mark {
     padding: 3rem;
   }
 
+  .md\:p-16 {
+    padding: 4rem;
+  }
+
   .md\:px-24 {
     padding-left: 6rem;
     padding-right: 6rem;
@@ -3357,12 +3371,37 @@ mark {
     bottom: 0px;
   }
 
+  .lg\:-inset-y-16 {
+    top: -4rem;
+    bottom: -4rem;
+  }
+
   .lg\:left-1\/2 {
     left: 50%;
   }
 
   .lg\:left-0 {
     left: 0px;
+  }
+
+  .lg\:-top-16 {
+    top: -4rem;
+  }
+
+  .lg\:-right-16 {
+    right: -4rem;
+  }
+
+  .lg\:-bottom-16 {
+    bottom: -4rem;
+  }
+
+  .lg\:-right-48 {
+    right: -12rem;
+  }
+
+  .lg\:-right-32 {
+    right: -8rem;
   }
 
   .lg\:order-first {
@@ -3385,6 +3424,16 @@ mark {
   .lg\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
+  }
+
+  .lg\:-my-16 {
+    margin-top: -4rem;
+    margin-bottom: -4rem;
+  }
+
+  .lg\:my-16 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
   }
 
   .lg\:ml-0 {
@@ -3423,6 +3472,18 @@ mark {
     margin-left: 4rem;
   }
 
+  .lg\:-mt-16 {
+    margin-top: -4rem;
+  }
+
+  .lg\:-mb-16 {
+    margin-bottom: -4rem;
+  }
+
+  .lg\:-mt-\[10\%\] {
+    margin-top: -10%;
+  }
+
   .lg\:block {
     display: block;
   }
@@ -3447,12 +3508,28 @@ mark {
     height: 100%;
   }
 
+  .lg\:h-\[120\%\] {
+    height: 120%;
+  }
+
+  .lg\:h-\[calc\(100\%\+32rem\)\] {
+    height: calc(100% + 32rem);
+  }
+
+  .lg\:h-auto {
+    height: auto;
+  }
+
   .lg\:w-0 {
     width: 0px;
   }
 
   .lg\:w-auto {
     width: auto;
+  }
+
+  .lg\:w-full {
+    width: 100%;
   }
 
   .lg\:max-w-none {
@@ -3465,6 +3542,14 @@ mark {
 
   .lg\:max-w-screen-xl {
     max-width: 1280px;
+  }
+
+  .lg\:max-w-7xl {
+    max-width: 80rem;
+  }
+
+  .lg\:max-w-screen-2xl {
+    max-width: 1400px;
   }
 
   .lg\:flex-1 {
@@ -3547,6 +3632,10 @@ mark {
     padding: 2rem;
   }
 
+  .lg\:p-16 {
+    padding: 4rem;
+  }
+
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -3570,6 +3659,21 @@ mark {
   .lg\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  .lg\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .lg\:py-32 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  .lg\:py-28 {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
   }
 
   .lg\:pt-12 {
@@ -3598,6 +3702,10 @@ mark {
 
   .lg\:pl-4 {
     padding-left: 1rem;
+  }
+
+  .lg\:pl-16 {
+    padding-left: 4rem;
   }
 
   .lg\:text-left {
