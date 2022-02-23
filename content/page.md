@@ -1,6 +1,6 @@
 ---
 layout: blocks
-title: page
+title: Page
 url: ''
 description: 'Page description'
 
