@@ -45,4 +45,17 @@ blocks:
       linkedin: "#"
       twitter: "#"
     image: "https://dummyimage.com/660"
+
+- block: logos
+  heading: #Our Clients
+  subheading: #Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.
+  logos:
+  - "https://dummyimage.com/250x100"
+  - "https://dummyimage.com/250x100"
+  - "https://dummyimage.com/250x100"
+  - "https://dummyimage.com/250x100"
+  - "https://dummyimage.com/250x100"
+  - "https://dummyimage.com/250x100"
+  - "https://dummyimage.com/250x100"
+  - "https://dummyimage.com/250x100"
 ---
