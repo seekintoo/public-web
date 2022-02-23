@@ -58,4 +58,13 @@ blocks:
   - "https://dummyimage.com/250x100"
   - "https://dummyimage.com/250x100"
   - "https://dummyimage.com/250x100"
+
+- block: cta-3
+  heading: Join our team
+  text: Lorem Ipsum is simply dummy text of the printing and dolorem upsumes typesetting industry.
+  image: "https://dummyimage.com/700"
+  button:
+    text: Learn More
+    url: "#"
+  
 ---
