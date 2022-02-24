@@ -100,6 +100,28 @@ blocks:
           text: Learn More
           url: "#"
 
+  - block: testimonials
+    heading: Have questions?
+    subheading: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
+    testimonials:
+    - name: Judith Black
+      title: CEO at XyzInsights
+      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.
+      image: "https://dummyimage.com/300"
+    - name: Fred Black
+      title: CEO at XyzInsights
+      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.
+      image: "https://dummyimage.com/300"
+    - name: Judith Black
+      title: CEO at XyzInsights
+      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.
+      image: "https://dummyimage.com/300"
+    - name: Judith Black
+      title: CEO at XyzInsights
+      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.
+      image: "https://dummyimage.com/300"
+
+
   # - block: logos
   #   heading: Our Clients
   #   subheading: Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.
