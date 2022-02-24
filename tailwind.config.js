@@ -37,7 +37,7 @@ module.exports = {
       //   '6xl': ['3.75rem', '1.1'],
       // },
       maxWidth: {
-        'screen-2xl': '1400px'
+        'screen-2xl': '1340px'
       }
     },
   },

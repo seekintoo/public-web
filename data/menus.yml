@@ -23,11 +23,18 @@ navbar_center:
     url: "/risk-advisory/"
     icon: exclamation
     desc: Lorem ipsum doloren sulum talem
-- name: Team
-  url: "/team/"
-  children: []
-- name: Careers
-  url: "/careers/"
+- name: Company
+  children: 
+  - name: Team
+    url: "/team/"
+    icon: shield
+    desc: Lorem ipsum doloren sulum talem
+  - name: Careers
+    url: "/careers/"
+    icon: shield
+    desc: Lorem ipsum doloren sulum talem
+- name: Blog
+  url: "/blog/"
   children: []
 - name: Contact
   url: "/contact/"

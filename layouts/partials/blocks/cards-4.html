@@ -10,7 +10,7 @@
     <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
       {{ range .cards }}
         <div class="relative rounded-md rounded-br-4xl drop-shadow-md hover:drop-shadow-xl border border-secondary-300 overflow-hidden bg-white p-8 flex flex-col justify-between">
-          <div>
+          <div class="flex-1">
             {{ if .icon }}
               <img class="mb-5" src="{{ .icon | absURL }}" alt="{{ .heading }}">
             {{ end }}

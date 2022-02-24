@@ -1,0 +1,62 @@
+{{ define "main" }}
+  <div class="bg-white max-w-8xl px-6 lg:px-8 py-11 mx-auto lg:py-16">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-12 gap-x-10">
+      <div class="col-span-12 lg:col-span-2">
+        xxxx    
+      </div>
+      <div class="col-span-12 lg:col-span-9">
+        <header>
+          <div class="text-xs text-white bg-blue-600 capitalize font-semibold rounded-full inline-block px-4 py-1">
+            {{ if .Params.categories }}
+              {{ range first 1 .Params.categories }}{{ . }}{{ end }}
+            {{ else }}
+              {{ (replace (replace (replace .CurrentSection "-" " ") "Page(/blog/" "") "/_index.md)" "") }}
+            {{ end }}
+          </div>
+          <h1 class="font-semibold text-4xl leading-10 lg:text-5xl lg:leading-11 mt-6">{{ .Title }}</h1>
+          {{ with .Params.introduction }}
+            <div class="mt-4 lg:mt-7 leading-7 text-gray-700 text-xl">{{ . }}</div>
+          {{ end }}
+          {{ $author := .Site.GetPage (printf "authors/%s" (urlize .Params.Author)) }}
+          <div class="flex items-center mt-6">
+            <div class="flex-shrink-0">
+              <img class="w-10 h-10 rounded-full" src="{{ $author.Params.photo }}"alt="{{ $author.Params.name }}">
+            </div>
+            <div class="ml-3">
+              <p class="text-sm leading-5 block">
+                  {{ $author.Params.name }}
+              </p>
+              <div class="block text-sm leading-5">
+                <time datetime="2020-03-16">
+                    {{ dateFormat "January 02, 2006" .Date }}
+                </time>
+                <span class="ml-3">
+                  {{ .ReadingTime }} min read
+                </span>
+              </div>
+            </div>
+          </div>  
+          <div class="space-x-4 mt-6 flex flex-row mb-8 lg:hidden">
+            {{ partial "share.html" . }}    
+          </div>              
+        </header>
+        <div class="mt-6 lg:mt-10 prose">{{ .Content }}</div>
+          <h2 class="font-semibold text-3xl leading-10 lg:text-4xl lg:leading-10 mt-10 lg:mt-16">
+              Got another minute? Read up on our other blog posts:
+          </h2>
+          <div class="grid md:grid-cols-2 gap-6 mt-6 lg:mt-10 items-stretch">
+            
+            {{ range first 1 (shuffle (where (where (where site.RegularPages "Type" "in" site.Params.mainSections) "Title" "!=" .Title ) "File.Path" "!=" .Params.recommendedBlogPost)) }}
+              {{ partial "card-post.html" . }}
+            {{ end }}      
+          </div>        
+      </div>
+      <div class="col-span-12 lg:col-span-1 hidden lg:block">
+        <div class="space-y-4 mt-14">
+          {{ partial "share.html" . }}    
+        </div>
+      </div>
+    </div>
+  </div>
+
+{{ end }}

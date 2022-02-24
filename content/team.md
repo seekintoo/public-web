@@ -64,7 +64,7 @@ blocks:
   text: Lorem Ipsum is simply dummy text of the printing and dolorem upsumes typesetting industry.
   image: "https://dummyimage.com/700"
   button:
-    text: Learn More
-    url: "#"
+    text: See Open Positions
+    url: "/careers/"
   
 ---

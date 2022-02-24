@@ -1,19 +1,29 @@
-<div class="relative border border-slate-100 rounded-xl h-full transition duration-100 ease-in-out hover:shadow-xl bg-white">
-  {{ if .Params.image }}
-    <div class="text-center">
-      <img class="inline-block rounded-t-xl" src="{{ .Params.image | absURL }}" alt="{{ .Title }}">
-    </div>
-  {{ end }}
-  <div class="p-6 pt-5">
-    <h3 class="leading-6 text-xl font-semibold text-primary">{{ .Title }}</h3>
-    {{ with .Params.description }}
-      <div class="mt-2 leading-6 text-slate-700">{{ . }}</div>
+<div class="relative border border-secondary-300 rounded-md rounded-br-4xl h-full transition duration-100 ease-in-out shadow-md hover:shadow-xl bg-white flex flex-col justify-between">
+  <div>
+    {{ if .Params.image }}
+      <div class="aspect-w-16 aspect-h-9">
+        <img class="object-cover rounded-t-md" src="{{ .Params.image | absURL }}" alt="{{ .Title }}">
+      </div>
     {{ end }}
-    <div class="mt-2 text-sm text-slate-400">
-      <time datetime="2020-03-16">
-        {{ dateFormat "January 02, 2006" .Date }}
-      </time>
-    </div>    
+    <div class="px-6 pt-5">
+      <div class="flex-1">
+        <h3 class="leading-6 text-xl font-semibold text-primary">{{ .Title }}</h3>
+        {{ with .Params.summary }}
+          <div class="mt-2 leading-6 text-slate-700">{{ . }}</div>
+        {{ end }}
+        <div class="mt-2 text-sm text-slate-400">
+          <time datetime="2020-03-16">
+            {{ dateFormat "January 02, 2006" .Date }}
+          </time>
+        </div>
+      </div>
+    </div>
   </div>
-  <a class="absolute inset-0" href="{{ .Params.medium }}" title="{{ .Title }}" target="_blank" rel="noopener noreferrer"></a>
+  <div class="p-6 text-xs font-bold text-primary-500 uppercase tracking-wider"> 
+    Read now 
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 inline-flex" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+    </svg>            
+  </div>
+  <a class="absolute inset-0" href="{{ .Permalink }}" title="{{ .Title }}"></a>
 </div>

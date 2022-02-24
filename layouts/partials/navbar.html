@@ -1,197 +1,199 @@
 <div class="sticky top-0 z-50 bg-white border-b border-slate-200" x-data="{ mobile: false }" @click.outside="mobile = false">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6">
-    <div class="flex justify-between items-center py-6 lg:justify-start lg:space-x-10">
-      <div class="flex justify-start lg:w-0 lg:flex-1">
-        <a href="/">
-          <span class="sr-only">Workflow</span>
-          <img class="h-7 lg:h-9 w-auto" src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" width="256" height="44">
-        </a>
-      </div>
-      <div class="-mr-2 -my-2 lg:hidden">
-        <button type="button" @click="mobile = ! mobile" class="rounded-md p-2 inline-flex items-center justify-center text-secondary-900 hover:text-violet-800 focus:outline-none" aria-expanded="false">
-          <span class="sr-only">Open menu</span>
-          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
-      <nav class="hidden lg:flex space-x-8">
-      {{- $current := . -}}
-      {{ range .Site.Data.menus.navbar_center }}
-        {{ $active := in $current.RelPermalink .url }}
-        {{ if .children }}
-          {{ $active := in $current.RelPermalink .url }}   
-          {{ if $active }} {{ end }} 
-      
-          <div class="relative" x-data="{ dropdown: false }">
-            <button type="button" @click.prevent="dropdown = ! dropdown" :class="{ 'text-violet-800': dropdown, 'text-secondary-900': !(dropdown) }" class="text-secondary-900 group rounded-md inline-flex items-center text-base font-medium hover:text-violet-800 focus:outline-none" aria-expanded="false">
-              <span>{{ .name }}</span>
-              <svg :class="{ 'text-violet-800': dropdown, 'text-primary': !(dropdown) }" class="text-primary ml-1 h-5 w-5 group-hover:text-violet-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-              </svg>
-            </button>
-
-            <div x-show="dropdown" :class="{ 'block': dropdown, 'hidden': !(dropdown) }" 
-            x-transition:enter="transition ease-out duration-200"
-            x-transition:enter-start="opacity-0 translate-y-1"
-            x-transition:enter-end="opacity-100 translate-y-0"
-            x-transition:leave="transition ease-in duration-150"
-            x-transition:leave-start="opacity-100 translate-y-0"
-            x-transition:leave-end="opacity-0 translate-y-1"
-            @click.outside="dropdown = false" class="hidden absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
-              <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                  {{ range .children }}
-                    <a href="{{ .url | relURL }}" class="-m-3 p-3 flex items-start rounded-lg hover:bg-secondary-50">
-                      {{ if .icon }}
-                        <div class="text-violet-700 flex-shrink-0 mr-4">
-                          {{ $icon := (printf "%s%s%s" "icons/" .icon ".svg" ) }}
-                          {{ partial $icon . }}
-                        </div>
-                      {{ end }}
-                      <div>
-                        <p class="text-base font-medium text-secondary-900">{{ .name }}</p>
-                        {{ with .desc }}
-                          <p class="mt-1 text-sm text-slate-500">{{ . }}</p>
-                        {{ end }}
-                      </div>
-                    </a>
-                  {{ end }}
-                </div>
-
-                <div class="px-5 py-5 bg-secondary-50 sm:px-8 sm:py-8">
-                  <div>
-                    <h3 class="text-sm tracking-wide font-medium text-slate-500 uppercase">Recent Posts</h3>
-                    <ul role="list" class="mt-4 space-y-4">
-                      <li class="text-base truncate">
-                        <a href="#" class="font-medium text-gray-900 hover:text-gray-700"> Boost your conversion rate </a>
-                      </li>
-
-                      <li class="text-base truncate">
-                        <a href="#" class="font-medium text-gray-900 hover:text-gray-700"> How to use search engine optimization to drive traffic to your site </a>
-                      </li>
-
-                      <li class="text-base truncate">
-                        <a href="#" class="font-medium text-gray-900 hover:text-gray-700"> Improve your customer experience </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="mt-5 text-sm">
-                    <a href="#" class="font-medium text-violet-800 hover:text-violet-600"> View all posts <span aria-hidden="true">&rarr;</span></a>
-                  </div>
-                </div>
-
-              <div class="px-5 py-5 bg-white space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
-                <div class="flow-root">
-                  <a href="#" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-secondary-50">
-                    <!-- Heroicon name: outline/play -->
-                    <svg class="flex-shrink-0 h-6 w-6 text-slate-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span class="ml-3">Watch Demo</span>
-                  </a>
-                </div>
-
-                <div class="flow-root">
-                  <a href="#" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-secondary-50">
-                    <!-- Heroicon name: outline/phone -->
-                    <svg class="flex-shrink-0 h-6 w-6 text-slate-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    <span class="ml-3">Contact Sales</span>
-                  </a>
-                </div>
-              </div>
-
-
-              </div>
-            </div>
-          </div>
-          {{ else }}
-            <a href="{{ if in .url "http" }}{{ .url }}{{ else }}{{ .url | relURL }}{{ end }}" class="text-base font-medium text-secondary-900 hover:text-violet-800"{{ if in .url "http" }} target="_blank"{{ end }}> {{ .name }} </a>
-          {{ end }}
-        {{ end }}
-
-      </nav>
-      <div class="hidden lg:flex items-center justify-end lg:flex-1 lg:w-0">
-        {{ if .Site.Data.menus.navbar_right.secondary.url }}
-          <a href="{{ .Site.Data.menus.navbar_right.secondary.url }}" class="whitespace-nowrap text-base font-medium text-secondary-900 hover:text-violet-800"> {{ .Site.Data.menus.navbar_right.secondary.name }} </a>
-        {{ end }}
-        {{ if .Site.Data.menus.navbar_right.primary.url }}
-          <a href="{{ .Site.Data.menus.navbar_right.primary.url }}" class="ml-6 whitespace-nowrap inline-flex items-center justify-center px-4 py-2.5 border border-transparent rounded-md shadow text-base font-medium text-white bg-primary-500 hover:bg-primary-600"> {{ .Site.Data.menus.navbar_right.primary.name }} </a>
-        {{ end }}
-      </div>
-    </div>
-  </div>
-
-  <div x-show="mobile" :class="{ 'block': mobile, 'hidden': !(mobile) }" 
-    x-transition:enter="duration-200 ease-out"
-    x-transition:enter-start="opacity-0 scale-95"
-    x-transition:enter-end="opacity-100 scale-100"
-    x-transition:leave="duration-100 ease-in"
-    x-transition:leave-start="opacity-100 scale-100"
-    x-transition:leave-end="opacity-0 scale-95"
-    class="hidden absolute top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden z-10">
-    <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-      <div class="pt-5 pb-6 px-5">
-        <div class="flex items-center justify-between">
-          <div>
-            <img class="h-7 w-auto" src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}">
-          </div>
-          <div class="-mr-2">
-            <button type="button" @click="mobile = false" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-violet-800 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-              <span class="sr-only">Close menu</span>
-              <!-- Heroicon name: outline/x -->
-              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
+  <div class="px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-screen-2xl">
+      <div class="flex justify-between items-center py-6 lg:justify-start lg:space-x-10">
+        <div class="flex justify-start lg:w-0 lg:flex-1">
+          <a href="/">
+            <span class="sr-only">Workflow</span>
+            <img class="h-7 lg:h-9 w-auto" src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" width="256" height="44">
+          </a>
         </div>
-        <div class="mt-10">
-          <nav class="grid">
-            {{- $current := . -}}
-            {{ range .Site.Data.menus.navbar_center }}
-              {{ $active := in $current.RelPermalink .url }}
-              {{ if .children }}
-                {{ $active := in $current.RelPermalink .url }}   
-                <div x-data="{ accordion: false }"> 
-                  <a href="#" class="-ml-3 text-lg flex font-semibold p-3 items-center rounded-md hover:bg-secondary-50 text-primary hover:text-violet-800" @click.prevent="accordion = ! accordion"> 
-                    <span class="flex-1"> {{ .name }} </span>
-                    <svg xmlns="http://www.w3.org/2000/svg" :class="{ 'rotate-90': accordion, 'transform-none': !(accordion) }" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                    </svg>
-                  </a>
-                  <div x-show="accordion" :class="{ 'block': accordion, 'hidden': !(accordion) }">
+        <div class="-mr-2 -my-2 lg:hidden">
+          <button type="button" @click="mobile = ! mobile" class="rounded-md p-2 inline-flex items-center justify-center text-secondary-900 hover:text-violet-800 focus:outline-none" aria-expanded="false">
+            <span class="sr-only">Open menu</span>
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+        <nav class="hidden lg:flex space-x-8">
+        {{- $current := . -}}
+        {{ range .Site.Data.menus.navbar_center }}
+          {{ $active := in $current.RelPermalink .url }}
+          {{ if .children }}
+            {{ $active := in $current.RelPermalink .url }}   
+            {{ if $active }} {{ end }} 
+        
+            <div class="relative" x-data="{ dropdown: false }">
+              <button type="button" @click.prevent="dropdown = ! dropdown" :class="{ 'text-violet-800': dropdown, 'text-secondary-900': !(dropdown) }" class="text-secondary-900 group rounded-md inline-flex items-center text-base font-medium hover:text-violet-800 focus:outline-none" aria-expanded="false">
+                <span>{{ .name }}</span>
+                <svg :class="{ 'text-violet-800': dropdown, 'text-primary': !(dropdown) }" class="text-primary ml-1 h-5 w-5 group-hover:text-violet-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </button>
+
+              <div x-show="dropdown" :class="{ 'block': dropdown, 'hidden': !(dropdown) }" 
+              x-transition:enter="transition ease-out duration-200"
+              x-transition:enter-start="opacity-0 translate-y-1"
+              x-transition:enter-end="opacity-100 translate-y-0"
+              x-transition:leave="transition ease-in duration-150"
+              x-transition:leave-start="opacity-100 translate-y-0"
+              x-transition:leave-end="opacity-0 translate-y-1"
+              @click.outside="dropdown = false" class="hidden absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                  <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                     {{ range .children }}
-                      <a href="{{ .url | relURL }}" class="ml-4 p-3 flex items-center rounded-md hover:bg-secondary-50 text-primary hover:text-violet-800">
-                        <span class="text-base font-semibold"> {{ .name }} </span>
+                      <a href="{{ .url | relURL }}" class="-m-3 p-3 flex items-start rounded-lg hover:bg-secondary-50">
+                        {{ if .icon }}
+                          <div class="text-violet-700 flex-shrink-0 mr-4">
+                            {{ $icon := (printf "%s%s%s" "icons/" .icon ".svg" ) }}
+                            {{ partial $icon . }}
+                          </div>
+                        {{ end }}
+                        <div>
+                          <p class="text-base font-medium text-secondary-900">{{ .name }}</p>
+                          {{ with .desc }}
+                            <p class="mt-1 text-sm text-slate-500">{{ . }}</p>
+                          {{ end }}
+                        </div>
                       </a>
                     {{ end }}
                   </div>
+
+                  <div class="px-5 py-5 bg-secondary-50 sm:px-8 sm:py-8">
+                    <div>
+                      <h3 class="text-sm tracking-wide font-medium text-slate-500 uppercase">Recent Posts</h3>
+                      <ul role="list" class="mt-4 space-y-4">
+                        <li class="text-base truncate">
+                          <a href="#" class="font-medium text-gray-900 hover:text-gray-700"> Boost your conversion rate </a>
+                        </li>
+
+                        <li class="text-base truncate">
+                          <a href="#" class="font-medium text-gray-900 hover:text-gray-700"> How to use search engine optimization to drive traffic to your site </a>
+                        </li>
+
+                        <li class="text-base truncate">
+                          <a href="#" class="font-medium text-gray-900 hover:text-gray-700"> Improve your customer experience </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="mt-5 text-sm">
+                      <a href="#" class="font-medium text-violet-800 hover:text-violet-600"> View all posts <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                  </div>
+
+                <div class="px-5 py-5 bg-white space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
+                  <div class="flow-root">
+                    <a href="#" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-secondary-50">
+                      <!-- Heroicon name: outline/play -->
+                      <svg class="flex-shrink-0 h-6 w-6 text-slate-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      <span class="ml-3">Watch Demo</span>
+                    </a>
+                  </div>
+
+                  <div class="flow-root">
+                    <a href="#" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-secondary-50">
+                      <!-- Heroicon name: outline/phone -->
+                      <svg class="flex-shrink-0 h-6 w-6 text-slate-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                      <span class="ml-3">Contact Sales</span>
+                    </a>
+                  </div>
                 </div>
-              {{ else }}
-                <div class="p-3 pl-0">
-                  <a href="{{ if in .url "http" }}{{ .url }}{{ else }}{{ .url | relURL }}{{ end }}" class="-m-3 p-3 flex items-center rounded-md hover:bg-secondary-50 text-primary hover:text-violet-800" 
-                    {{ if in .url "http" }} target="_blank"{{ end }}>
-                    <span class="text-lg font-semibold"> {{ .name }} </span>
-                  </a>
+
+
                 </div>
-              {{ end }}
+              </div>
+            </div>
+            {{ else }}
+              <a href="{{ if in .url "http" }}{{ .url }}{{ else }}{{ .url | relURL }}{{ end }}" class="text-base font-medium text-secondary-900 hover:text-violet-800"{{ if in .url "http" }} target="_blank"{{ end }}> {{ .name }} </a>
             {{ end }}
-          </nav>
+          {{ end }}
+
+        </nav>
+        <div class="hidden lg:flex items-center justify-end lg:flex-1 lg:w-0">
+          {{ if .Site.Data.menus.navbar_right.secondary.url }}
+            <a href="{{ .Site.Data.menus.navbar_right.secondary.url }}" class="whitespace-nowrap text-base font-medium text-secondary-900 hover:text-violet-800"> {{ .Site.Data.menus.navbar_right.secondary.name }} </a>
+          {{ end }}
+          {{ if .Site.Data.menus.navbar_right.primary.url }}
+            <a href="{{ .Site.Data.menus.navbar_right.primary.url }}" class="ml-6 whitespace-nowrap inline-flex items-center justify-center px-4 py-2.5 border border-transparent rounded-md shadow text-base font-medium text-white bg-primary-500 hover:bg-primary-600"> {{ .Site.Data.menus.navbar_right.primary.name }} </a>
+          {{ end }}
         </div>
       </div>
-      <div class="py-6 px-5 text-center">
-        <div>
-          {{ if .Site.Data.menus.navbar_right.primary.url }}
-            <a href="{{ .Site.Data.menus.navbar_right.primary.url }}" class="w-full flex items-center justify-center px-4 py-2.5 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-secondary hover:bg-secondary-dark"> {{ .Site.Data.menus.navbar_right.primary.name }} </a>
-          {{ end }}
-          {{ if .Site.Data.menus.navbar_right.secondary.url }}
-            <a href="{{ .Site.Data.menus.navbar_right.secondary.url }}" class="text-secondary-900 hover:text-violet-800 mt-6 block font-medium"> {{ .Site.Data.menus.navbar_right.secondary.name }} </a>
-          {{ end }}
-          </p>
+    </div>
+
+    <div x-show="mobile" :class="{ 'block': mobile, 'hidden': !(mobile) }" 
+      x-transition:enter="duration-200 ease-out"
+      x-transition:enter-start="opacity-0 scale-95"
+      x-transition:enter-end="opacity-100 scale-100"
+      x-transition:leave="duration-100 ease-in"
+      x-transition:leave-start="opacity-100 scale-100"
+      x-transition:leave-end="opacity-0 scale-95"
+      class="hidden absolute top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden z-10">
+      <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+        <div class="pt-5 pb-6 px-5">
+          <div class="flex items-center justify-between">
+            <div>
+              <img class="h-7 w-auto" src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}">
+            </div>
+            <div class="-mr-2">
+              <button type="button" @click="mobile = false" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-violet-800 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <span class="sr-only">Close menu</span>
+                <!-- Heroicon name: outline/x -->
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="mt-10">
+            <nav class="grid">
+              {{- $current := . -}}
+              {{ range .Site.Data.menus.navbar_center }}
+                {{ $active := in $current.RelPermalink .url }}
+                {{ if .children }}
+                  {{ $active := in $current.RelPermalink .url }}   
+                  <div x-data="{ accordion: false }"> 
+                    <a href="#" class="-ml-3 text-lg flex font-semibold p-3 items-center rounded-md hover:bg-secondary-50 text-primary hover:text-violet-800" @click.prevent="accordion = ! accordion"> 
+                      <span class="flex-1"> {{ .name }} </span>
+                      <svg xmlns="http://www.w3.org/2000/svg" :class="{ 'rotate-90': accordion, 'transform-none': !(accordion) }" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                      </svg>
+                    </a>
+                    <div x-show="accordion" :class="{ 'block': accordion, 'hidden': !(accordion) }">
+                      {{ range .children }}
+                        <a href="{{ .url | relURL }}" class="ml-4 p-3 flex items-center rounded-md hover:bg-secondary-50 text-primary hover:text-violet-800">
+                          <span class="text-base font-semibold"> {{ .name }} </span>
+                        </a>
+                      {{ end }}
+                    </div>
+                  </div>
+                {{ else }}
+                  <div class="p-3 pl-0">
+                    <a href="{{ if in .url "http" }}{{ .url }}{{ else }}{{ .url | relURL }}{{ end }}" class="-m-3 p-3 flex items-center rounded-md hover:bg-secondary-50 text-primary hover:text-violet-800" 
+                      {{ if in .url "http" }} target="_blank"{{ end }}>
+                      <span class="text-lg font-semibold"> {{ .name }} </span>
+                    </a>
+                  </div>
+                {{ end }}
+              {{ end }}
+            </nav>
+          </div>
+        </div>
+        <div class="py-6 px-5 text-center">
+          <div>
+            {{ if .Site.Data.menus.navbar_right.primary.url }}
+              <a href="{{ .Site.Data.menus.navbar_right.primary.url }}" class="w-full flex items-center justify-center px-4 py-2.5 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-secondary hover:bg-secondary-dark"> {{ .Site.Data.menus.navbar_right.primary.name }} </a>
+            {{ end }}
+            {{ if .Site.Data.menus.navbar_right.secondary.url }}
+              <a href="{{ .Site.Data.menus.navbar_right.secondary.url }}" class="text-secondary-900 hover:text-violet-800 mt-6 block font-medium"> {{ .Site.Data.menus.navbar_right.secondary.name }} </a>
+            {{ end }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
