@@ -1,21 +1,18 @@
-<div class="py-16 lg:py-24 bg-gradient-to-b from-white to-blue-50">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
+<div class="py-16 lg:py-24 relative bg-gradient-to-b from-violet-700 to-secondary-700">
+  <div class="absolute inset-0" style="background-image: linear-gradient(174deg, #ffffff 35%, rgba(255, 1255, 255, 0) 35%)"></div>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
     {{ if or .heading .subheading }}
-      <div class="text-center mb-10">
+      <div class="mb-10">
         {{ with .heading }}
           <h2 class="text-4xl font-semibold leading-tight text-primary md:text-5xl">{{ . }}</h2>
         {{ end }}
         {{ with .subheading }}
-          <p class="mt-6 max-w-2xl text-xl text-slate-500 mx-auto">{{ . }}</p>
+          <p class="mt-6 max-w-2xl text-xl text-slate-500">{{ . }}</p>
         {{ end }}
       </div>
     {{ end }}
-
-    {{ with .text }}
-      <div class="prose mx-auto">{{ . | markdownify }}</div>
-    {{ end }}
-
+  </div>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
     <div class="grid md:gap-y-6 mt-16">
       {{ range .jobs }}
         <div class="border border-slate-100 rounded-xl bg-white">
@@ -41,7 +38,7 @@
               {{ end }}
             </div>
             <div>
-              <a class="sm:ml-6 lg:ml-16 mt-6 sm:mt-0 whitespace-nowrap inline-flex items-center justify-center px-5 py-2.5 border border-transparent rounded-md shadow text-sm font-medium text-white bg-secondary hover:bg-secondary-dark w-full sm:w-fit" href="{{ .url }}">Apply</a>
+              <a class="sm:ml-6 lg:ml-16 mt-6 sm:mt-0 whitespace-nowrap inline-flex items-center justify-center px-5 py-2.5 border border-transparent rounded-md shadow text-sm font-medium text-white bg-secondary-500 hover:bg-secondary-600 w-full sm:w-fit" href="{{ .url }}">Apply</a>
             </div>    
           </div>
         </div>

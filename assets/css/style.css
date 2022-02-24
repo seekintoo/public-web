@@ -1958,6 +1958,11 @@ select {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(31 16 66 / 0));
 }
 
+.from-violet-700 {
+  --tw-gradient-from: #6d28d9;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(109 40 217 / 0));
+}
+
 .to-blue-50 {
   --tw-gradient-to: #eff6ff;
 }
@@ -1972,6 +1977,26 @@ select {
 
 .to-purple-900 {
   --tw-gradient-to: #581c87;
+}
+
+.to-violet-500 {
+  --tw-gradient-to: #8b5cf6;
+}
+
+.to-violet-700 {
+  --tw-gradient-to: #6d28d9;
+}
+
+.to-secondary-700 {
+  --tw-gradient-to: #2E1863;
+}
+
+.to-violet-900 {
+  --tw-gradient-to: #4c1d95;
+}
+
+.to-violet-800 {
+  --tw-gradient-to: #5b21b6;
 }
 
 .fill-current {

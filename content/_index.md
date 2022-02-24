@@ -149,32 +149,4 @@ blocks:
   #       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
   #     image: "https://dummyimage.com/50x50/bae7fd"
 
-  - block: testimonials
-    heading: Have questions?
-    subheading: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
-    testimonials:
-    - name: Judith Black
-      title: CEO at XyzInsights
-      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.
-      image: "https://dummyimage.com/300"
-    - name: Fred Black
-      title: CEO at XyzInsights
-      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.
-      image: "https://dummyimage.com/300"
-    - name: Judith Black
-      title: CEO at XyzInsights
-      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.
-      image: "https://dummyimage.com/300"
-    - name: Judith Black
-      title: CEO at XyzInsights
-      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.
-      image: "https://dummyimage.com/300"
-
-  - block: form
-    heading: Have questions?
-    subheading: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
-
-  - block: cta
-    text: Are you experiencing a security incident or have you been breached? Call us now.
-    phone: 1-800-876-1234
 ---
