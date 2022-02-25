@@ -33,7 +33,7 @@
   </div>
 </div>
 {{ end }}
-<div class="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 relative">
+<div id="posts" class="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 relative">
   <div class="absolute inset-0" style="background-image: linear-gradient(186deg, #D8DCFF 60%, rgba(255, 1255, 255, 0) 60%)"></div>
   <div class="mx-auto max-w-6xl relative">
     {{- $paginator := .Paginate (where (where .Site.RegularPages "Section" "blog") ".Params.featured" "!=" true) }}
