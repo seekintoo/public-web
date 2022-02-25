@@ -1,7 +1,7 @@
 baseURL = ""
 languageCode = "en-us"
 title = "Seekintoo Ltd. Site Title"
-paginate = 3
+paginate = 6
 
 [params]
 description = "Anim aute id magna aliqua adadnon polonem asum nuerom deserunt sunt."
