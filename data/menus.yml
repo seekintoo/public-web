@@ -33,6 +33,10 @@ navbar_center:
     url: "/careers/"
     icon: shield
     desc: Lorem ipsum doloren sulum talem
+  - name: Videos
+    url: "/videos/"
+    icon: play
+    desc: Lorem ipsum doloren sulum talem
 - name: Blog
   url: "/blog/"
   children: []
