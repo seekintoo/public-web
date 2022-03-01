@@ -12,15 +12,15 @@ blocks:
   videos:
   - heading: Lorem ipsum dolorem one
     text: Anim aute id magna aliqua ad ad non deserunt sunt. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
-    image: https://dummyimage.com/400x260
+    image: https://dummyimage.com/520x320
     video: N40pCn77fcE
   - heading: Lorem ipsum dolorem two
     text: Anim aute id magna aliqua ad ad non deserunt sunt. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
-    image: https://dummyimage.com/400x260
+    image: https://dummyimage.com/520x320
     video: 450f6aJpnNI
   - heading: Lorem ipsum dolorem three
     text: Anim aute id magna aliqua ad ad non deserunt sunt. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
-    image: https://dummyimage.com/400x260
+    image: https://dummyimage.com/520x320
     video: N40pCn77fcE
 
 - block: cta-3

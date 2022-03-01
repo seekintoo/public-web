@@ -179,7 +179,7 @@
         <div class="py-6 px-5 text-center">
           <div>
             {{ if .Site.Data.menus.navbar_right.primary.url }}
-              <a href="{{ .Site.Data.menus.navbar_right.primary.url }}" class="w-full flex items-center justify-center px-4 py-2.5 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-secondary hover:bg-secondary-dark"> {{ .Site.Data.menus.navbar_right.primary.name }} </a>
+              <a href="{{ .Site.Data.menus.navbar_right.primary.url }}" class="w-full flex items-center justify-center px-4 py-2.5 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary-500 hover:bg-primary-600"> {{ .Site.Data.menus.navbar_right.primary.name }} </a>
             {{ end }}
             {{ if .Site.Data.menus.navbar_right.secondary.url }}
               <a href="{{ .Site.Data.menus.navbar_right.secondary.url }}" class="text-secondary-900 hover:text-violet-800 mt-6 block font-medium"> {{ .Site.Data.menus.navbar_right.secondary.name }} </a>
