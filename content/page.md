@@ -29,6 +29,10 @@ blocks:
       text: Learn more
       url: "#"
 
+- block: gated
+  heading: Gated Content
+  subheading: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
+
 # - block: team
 #   heading: Team
 #   subheading: Lorem Ipsum is simply dummy text of the printing and dolorem upsumes typesetting industry.
