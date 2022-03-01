@@ -27,11 +27,11 @@ navbar_center:
   children: 
   - name: Team
     url: "/team/"
-    icon: shield
+    icon: users
     desc: Lorem ipsum doloren sulum talem
   - name: Careers
     url: "/careers/"
-    icon: shield
+    icon: academic-cap
     desc: Lorem ipsum doloren sulum talem
   - name: Videos
     url: "/videos/"

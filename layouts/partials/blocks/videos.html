@@ -1,0 +1,94 @@
+<div x-data="modal" class="relative bg-white py-16 lg:py-32 px-4 sm:px-6 lg:px-8">
+  <div class="absolute inset-0" style="background-image: linear-gradient(186deg, #D8DCFF 60%, rgba(255, 1255, 255, 0) 60%)"></div>
+  <div  x-data="videoComponent()" class="relative max-w-6xl mx-auto">
+    <div class="text-center">
+      <h2 class="text-4xl tracking-tight font-extrabold text-secondary-900 sm:text-5xl">{{ .heading }}</h2>
+      {{ with .subheading }}
+        <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">{{ . }}</p>
+      {{ end }}
+    </div>
+    <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+      {{ range .videos }}
+        <div class="relative rounded-md rounded-br-4xl drop-shadow-md hover:drop-shadow-xl border border-secondary-300 overflow-hidden bg-white flex flex-col justify-between">
+          <div class="flex-1">
+            {{ if .image }}
+              <div class="relative text-white">
+                <img class="relative" src="{{ .image | absURL }}" alt="{{ .heading }}">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 absolute right-6 bottom-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>     
+              </div>         
+            {{ end }}
+            <div class="p-8">
+              <h3 class="text-xl font-semibold text-secondary-900">{{ .heading }}</h3>
+              <p class="mt-3 text-base text-gray-600">{{ .text }}</p>
+            </div>
+          </div>
+          {{ with .link.text }}
+            <p class="mt-6 text-xs font-bold text-primary-500 uppercase tracking-wider"> {{ . }} 
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 inline-flex" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>            
+            </p>
+          {{ end }} 
+          <a x-on:click.prevent="modalShow = true; video($event)" data-video="{{ .video }}" data-title="{{ .heading }}" class="absolute inset-0" href="#" title="{{ .heading }}"></a>                     
+        </div>
+      {{ end }}
+    </div>
+
+    <div x-bind="modalWindow" class="fixed inset-0 overflow-y-auto z-[99]" role="dialog" aria-modal="true" aria-labelledby="modal-title-1" style="display: none;">
+      <div x-show="modalShow" x-transition.opacity="" class="fixed inset-0 bg-black bg-opacity-50" aria-hidden="true"></div>
+      <div x-show="modalShow" x-transition="" x-on:click="modalShow = false; remove($event)"
+        class="relative min-h-screen flex items-center justify-center p-4">
+        <div x-on:click.stop="" x-trap.noscroll.inert="modalShow"
+          class="relative max-w-2xl w-full bg-white rounded-lg shadow-lg p-8 pb-7 overflow-y-auto">
+          <button type="button" x-on:click="modalShow = false; remove($event)"
+            class="bg-white hover:text-slate-500 p-2 text-slate-300 absolute top-0 right-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <div class="aspect-w-16 aspect-h-9">
+            <iframe id="video" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <h2 class="text-2xl font-bold mt-5" id="title"></h2>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <script>
+    document.addEventListener('alpine:init', () => {
+      Alpine.data('modal', () => ({
+        modalShow: false
+      }))
+
+      Alpine.bind('modalWindow', () => ({
+        ['x-show']() {
+          return this.modalShow
+        },
+        ['x-on:keydown.escape.prevent.stop']() {
+          this.modalShow = false
+        },
+      }))
+    });
+
+    window.videoComponent = () => ({
+      videoUrl: "",
+      remove(e) {        
+        document.getElementById("video").src = "";
+        document.getElementById("title").innerHTML = "";
+      },
+      video(e) {        
+        this.videoUrl = e.target.dataset.video;
+        this.videoTitle = e.target.dataset.title;
+        document.getElementById("video").src = "https://www.youtube.com/embed/" + this.videoUrl + "?controls=0";
+        document.getElementById("title").innerHTML = this.videoTitle;
+      },      
+    });    
+  </script>
+</div>
+
+
