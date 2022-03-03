@@ -1,6 +1,6 @@
 ---
 title: Top 10 Crypto Accounting Issues
-summary: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum, or lipsum as it is sometimes known, is dummy text used.
+summary: Summary Ipsum is simply dummy text of the printing and typesetting industry it is sometimes known, is dummy text used.
 date: 2022-02-12T04:00:00+00:00
 image: https://dummyimage.com/500x300
 ---

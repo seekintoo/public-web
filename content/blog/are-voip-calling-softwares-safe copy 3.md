@@ -1,6 +1,6 @@
 ---
 title: Are VoIP Calling Safe?
-summary: Lorem Ipsum mmy text used.
+summary: Lorem Ipsum is simply dummy text of the printing and or lipsum as it is sometimes known, is dummy text used.
 date: 2021-08-04T04:00:00+00:00
 image: https://dummyimage.com/500x300
 

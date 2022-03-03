@@ -5,11 +5,18 @@ social:
   facebook: "#"
 
 navbar_center:
-- name: About Us
-  url: "/"
-  children: []
+# - name: Home
+#   url: "/"
+#   children: []
 - name: Services
   url: ""
+  buttons:
+  - name: Get An Estimate
+    url: "/estimate/"
+    icon: calculator
+  - name: Contact Sales
+    url: "#contact"
+    icon: mail
   children:
   - name: CYBERSOC
     url: "/cybersoc"
@@ -24,7 +31,18 @@ navbar_center:
     icon: exclamation
     desc: Lorem ipsum doloren sulum talem
 - name: Company
+  buttons:
+  - name: Get An Estimate
+    url: "/estimate/"
+    icon: calculator
+  - name: Contact Sales
+    url: "#contact"
+    icon: mail
   children: 
+  - name: About Us
+    url: "/about/"
+    icon: home
+    desc: Lorem ipsum doloren sulum talem
   - name: Team
     url: "/team/"
     icon: users
@@ -33,13 +51,29 @@ navbar_center:
     url: "/careers/"
     icon: academic-cap
     desc: Lorem ipsum doloren sulum talem
+- name: Resources
+  blog: true
+  buttons:
+  # - name: Blog
+  #   url: "/blog/"
+  #   icon: document-text
+  children: 
+  - name: Case Studies
+    url: "/blog/case-studies/"
+    icon: document-text
+    desc: Lorem ipsum doloren sulum talem
+  - name: Whitepapers
+    url: "/blog/whitepapers/"
+    icon: document-text
+    desc: Lorem ipsum doloren sulum talem
+  - name: Solution Breifs
+    url: "/blog/solution-breifs/"
+    icon: document-text
+    desc: Lorem ipsum doloren sulum talem    
   - name: Videos
     url: "/videos/"
     icon: play
     desc: Lorem ipsum doloren sulum talem
-- name: Blog
-  url: "/blog/"
-  children: []
 - name: Contact
   url: "/contact/"
   children: []
@@ -49,8 +83,8 @@ navbar_right:
     name: Customer Portal
     url: "#"
   primary:
-    name: Get Started
-    url: "#"
+    name: Get An Estimate
+    url: "/estimate/"
 
 footer:
 - heading: What we do
