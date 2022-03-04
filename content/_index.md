@@ -1,6 +1,6 @@
 ---
 layout: blocks
-title:
+title: Home
 url: ""
 description: "Front page description"
 

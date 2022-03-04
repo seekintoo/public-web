@@ -169,6 +169,21 @@
           {{ end }}
 
         </nav>
+        <div class="flex-1 flex items-center justify-center lg:ml-6 lg:justify-end relative">
+          <div class="max-w-lg w-full lg:max-w-xs">
+            <label for="search" class="sr-only">Search</label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <!-- Heroicon name: solid/search -->
+                <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <input id="search-input" name="search" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-violet-500 focus:border-vring-violet-500 sm:text-sm" placeholder="Search" type="search">
+            </div>
+          </div>
+          <ul id="results-container" class="absolute top-12 left-0 right-0 bg-white rounded-md border border-slate-200 shadow-md"></ul>
+        </div>          
         <div class="hidden lg:flex items-center justify-end lg:flex-1 lg:w-0">
           {{ if .Site.Data.menus.navbar_right.secondary.url }}
             <a href="{{ .Site.Data.menus.navbar_right.secondary.url }}" class="whitespace-nowrap text-base font-medium text-secondary-900 hover:text-violet-800"> {{ .Site.Data.menus.navbar_right.secondary.name }} </a>
@@ -237,7 +252,7 @@
               {{ end }}
             </nav>
           </div>
-        </div>
+        </div>      
         <div class="py-6 px-5 text-center">
           <div>
             {{ if .Site.Data.menus.navbar_right.primary.url }}
@@ -253,3 +268,63 @@
     </div>
   </div>
 </div>
+
+<script>
+var sjs = SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  json: '{{ "search.json" | relURL }}',
+  searchResultTemplate: '<li><a class="flex px-4 py-2" href="{url}">{title}</a></li>',
+	noResultsText: '<li class="no-results">No results found</li>',
+});
+
+searchResults();
+
+function searchResults() {
+  var currentItem = null;
+  var search = document.getElementById("search-input");
+  var results = document.getElementById( "results-container");
+  function removeActive() {
+    for (i = 0; i < results.children.length; i++) {
+      results.children[i].classList.remove("bg-slate-100");
+    }
+  }
+  results.addEventListener("mouseover", function(event) {
+    removeActive();
+    event.target.parentElement.classList.add("bg-slate-100");
+    currentItem = null;
+  });
+  results.addEventListener("mouseout", function(event) {
+    event.target.parentElement.classList.remove("bg-slate-100");
+  });
+  search.addEventListener("keyup", function(event) {
+    var resultItems = results.children;
+    var resultCount = results.children.length;
+    if (event.keyCode === 40) {
+      if (currentItem < (resultCount - 1)) {
+        if (currentItem === null) {
+          currentItem = 0;
+        } else {
+          removeActive();
+          currentItem++;
+        }
+        removeActive();
+        resultItems[currentItem].classList.add("bg-slate-100");
+      }
+    } else if (event.keyCode === 38) {
+      if (currentItem > 0) {
+        if (currentItem === null) {
+          currentItem = 0;
+        } else {
+          removeActive();
+          currentItem--;
+        }
+        removeActive();
+        resultItems[currentItem].classList.add("bg-slate-100");
+      }
+    } else if (event.keyCode === 13) {
+      resultItems[currentItem].children[0].click();
+    }
+  });
+}
+</script>

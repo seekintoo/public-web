@@ -1,8 +1,8 @@
 module.exports = {
   content: ['./layouts/**/*.html'],
-  // safelist: [
-  //   'bg-blue-50',
-  // ],   
+  safelist: [
+    'bg-slate-100',
+  ],   
   media: false, // or 'media' or 'class'
   theme: {
     extend: {

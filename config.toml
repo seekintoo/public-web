@@ -18,3 +18,10 @@ copyright = "Copyright © 2022 Seekintoo"
 
 # banner_text = "Excepteur sint occaecat cupidatat proident officia deserunt"
 # banner_url = "#"
+
+[outputFormats.search]
+baseName = "search"
+isPlainText = true
+mediaType = "application/json"
+[outputs]
+home = ["HTML", "RSS", "search"]
