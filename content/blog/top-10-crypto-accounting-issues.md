@@ -3,6 +3,8 @@ title: Top 10 Crypto Accounting Issues
 summary: Summary Ipsum is simply dummy text of the printing and typesetting industry it is sometimes known, is dummy text used.
 date: 2022-02-12T04:00:00+00:00
 image: https://dummyimage.com/500x300
+categories:
+- whitepapers
 ---
 
 Faucibus commodo massa rhoncus, volutpat. **Dignissim** sed **eget risus enim**. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. [Mattis mauris semper](#) sed amet vitae sed turpis id.

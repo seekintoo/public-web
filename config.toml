@@ -3,6 +3,9 @@ languageCode = "en-us"
 title = "Seekintoo Ltd. Site Title"
 paginate = 6
 
+[taxonomies]
+  categories = "categories"
+  
 [params]
 description = "Anim aute id magna aliqua adadnon polonem asum nuerom deserunt sunt."
 logo = "/images/logo.png"

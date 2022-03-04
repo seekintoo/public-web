@@ -59,15 +59,15 @@ navbar_center:
   #   icon: document-text
   children: 
   - name: Case Studies
-    url: "/blog/case-studies/"
+    url: "/categories/case-studies/"
     icon: document-text
     desc: Lorem ipsum doloren sulum talem
   - name: Whitepapers
-    url: "/blog/whitepapers/"
+    url: "/categories/whitepapers/"
     icon: document-text
     desc: Lorem ipsum doloren sulum talem
   - name: Solution Breifs
-    url: "/blog/solution-breifs/"
+    url: "/categories/solution-breifs/"
     icon: document-text
     desc: Lorem ipsum doloren sulum talem    
   - name: Videos
