@@ -74,6 +74,10 @@ navbar_center:
     url: "/videos/"
     icon: play
     desc: Lorem ipsum doloren sulum talem
+  - name: Term and Conditions
+    url: "/terms/"
+    icon: library
+    desc: Lorem ipsum doloren sulum talem
 - name: Contact
   url: "/#contact"
   children: []
