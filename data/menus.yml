@@ -75,12 +75,12 @@ navbar_center:
     icon: play
     desc: Lorem ipsum doloren sulum talem
 - name: Contact
-  url: "/contact/"
+  url: "/#contact"
   children: []
 
 navbar_right:
   secondary:
-    name: Customer Portal
+    name: Portal
     url: "#"
   primary:
     name: Get An Estimate
@@ -112,20 +112,20 @@ footer:
   - name: Terms
     url: "/terms/"
   - name: Privacy
-    url: "/privacy/"
+    url: "/terms/#privacy"
   - name: Cookies
-    url: "/cookies/"
+    url: "/terms/#cookies"
   - name: Disclosures
-    url: "/disclosures/"
+    url: "/terms/#disclosures"
 
 - heading: Company
   menu:
   - name: About Us
-    url: "/about-us/"
+    url: "/about/"
   - name: Team
     url: "/team/"
   - name: Careers
     url: "/careers/"
   - name: Contact
-    url: "/contact/"
+    url: "/#contact"
 

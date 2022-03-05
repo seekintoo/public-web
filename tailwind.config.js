@@ -26,16 +26,10 @@ module.exports = {
       },    
       fontFamily: {
         sans: "Poppins, sans-serif",
-        serif: ['PT Serif', 'serif'],
       },
       letterSpacing: {
         widest: '.25em',
       },      
-      // fontSize: {
-      //   '4xl': ['2.375rem', '1.1'],
-      //   '5xl': ['3rem', '1.1'],
-      //   '6xl': ['3.75rem', '1.1'],
-      // },
       maxWidth: {
         'screen-2xl': '1340px'
       }

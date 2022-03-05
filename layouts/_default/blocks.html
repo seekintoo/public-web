@@ -3,9 +3,11 @@
   {{ $blocks := .Params.blocks }}
   {{ range $blocks }}
     {{ if eq .block "content" }}
-      <div class="px-6 lg:px-8 py-11 lg:py-16 bg-white">
+      <div class="px-4 sm:px-6 lg:px-8 py-16 lg:py-24 bg-gradient-to-b from-slate-50 to-white{{ if eq .padding_remove true }} pt-0 lg:pt-0{{ end }}">   
         <div class="max-w-4xl mx-auto">
-          <div class="prose lg:prose-lg">{{ $.Page.Content }}</div>
+          <div class="prose prose-h2:text-3xl prose-h3:text-2xl prose-h4:text-xl max-w-none">
+            {{ $.Page.Content }}
+          </div>
         </div>
       </div>
     {{ else }}

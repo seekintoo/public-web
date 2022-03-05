@@ -29,6 +29,6 @@ blocks:
   image: "https://dummyimage.com/700"
   button:
     text: Learn More
-    url: "#"
+    url: "/careers/"
   
 ---

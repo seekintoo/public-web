@@ -1,4 +1,4 @@
-<div class="relative py-16 lg:py-32 bg-white">
+<div class="relative py-16 lg:py-32 bg-white{{ if eq .padding_remove true }} pt-0 lg:pt-0{{ end }}">
   <div class="hidden absolute top-0 inset-x-0 h-1/2 bg-secondary-50 lg:block" aria-hidden="true"></div>
   <div class="max-w-7xl mx-auto bg-secondary-500 lg:bg-transparent lg:px-8">
     <div class="lg:grid lg:grid-cols-12">
@@ -31,7 +31,7 @@
           </svg>
         </div>
         <div class="relative max-w-md mx-auto py-12 px-4 space-y-6 sm:max-w-3xl sm:py-16 sm:px-6 lg:max-w-none lg:p-0 lg:col-start-4 lg:col-span-6">
-          <h2 class="text-4xl font-extrabold text-white" id="join-heading">{{ .heading }}</h2>
+          <h2 class="text-4xl font-bold text-white" id="join-heading">{{ .heading }}</h2>
           <p class="text-lg text-white">{{ .text }}</p>
           {{ if .button.url }}
           <a class="block w-full py-3 px-5 text-center bg-white border border-transparent rounded-md shadow-md text-base font-medium text-secondary-700 hover:bg-secondary-50 sm:inline-block sm:w-auto" href="{{ .button.url | relURL }}">{{ .button.text }}</a>

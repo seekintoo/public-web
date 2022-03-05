@@ -1,12 +1,12 @@
 ---
 layout: blocks
-title: Home
+title: About us
 url: ""
 description: "Front page description"
 
 blocks:
   - block: hero
-    superheading: Welcome to Seekintoo
+    superheading: About Seekintoo
     heading: Technology Alone Won’t <mark>Keep You Safe</mark>
     subheading: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
     button:

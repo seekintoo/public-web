@@ -47,8 +47,8 @@
   </div>
   <div class="relative px-4 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-5xl">
-      <h2 class="font-semibold text-3xl leading-10 lg:text-4xl lg:leading-10 mt-12 lg:mt-20 text-center">
-          Read up on our other blog posts
+      <h2 class="font-bold text-3xl leading-10 lg:text-4xl lg:leading-10 mt-12 lg:mt-20 text-center">
+          Read up on our other resources
       </h2>
       <div class="grid md:grid-cols-3 gap-6 mt-6 lg:mt-10 items-stretch">
         {{ range first 3 (shuffle (where (where site.RegularPages "Type" "in" site.Params.mainSections) "Title" "!=" .Title )) }}

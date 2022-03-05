@@ -1,7 +1,7 @@
 <div x-data="{ blog: false }" class="relative mb-6 lg:hidden">
   <a href="#" @click.prevent="blog = ! blog" :class="{ 'text-violet-800': blog, 'text-secondary-900': !(blog) }" class="relative w-full lg:hidden text-lg font-semibold hover:text-secondary-500 mb-3 flex items-center">
     <span class="grow">Resources</span>
-    <svg :class="{ 'text-violet-800': blog, 'text-primary': !(blog) }" class="text-primary ml-1 h-5 w-5 group-hover:text-violet-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+    <svg :class="{ 'text-violet-800': blog, 'text-primary': !(blog) }" class="text-secondary-900 ml-1 h-5 w-5 group-hover:text-violet-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
       <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
     </svg>    
     </a>
