@@ -1,12 +1,12 @@
 {{ define "main" }}
+{{ $paginator := .Paginator }}
 <div class="py-16 lg:py-24 px-4 sm:px-6 lg:px-8">  
   <div class="mx-auto max-w-screen-2xl">
     <div class="lg:flex space-y-8 lg:space-y-0 lg:space-x-12">
       <div class="border-b lg:border-b-0 lg:border-r border-slate-200 shrink-0">
         {{ partial "nav-categories.html" . }}
       </div>
-      {{ $posts := where $.Site.RegularPages "Section" "resources" }}
-      {{ range first 1 $posts }}
+      {{ range first 1 $paginator.Pages }}
         <div class="grid lg:grid-cols-12 items-center gap-12 lg:gap-16">
           <div class="lg:col-span-7 xl:col-span-6">
             <h1 class="mt-4 text-5xl tracking-tight font-bold text-secondary-900 sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
@@ -42,10 +42,9 @@
 <div id="posts" class="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 relative">
   <div class="absolute inset-0" style="background-image: linear-gradient(186deg, #D8DCFF 60%, rgba(255, 1255, 255, 0) 60%)"></div>
   <div class="mx-auto max-w-6xl relative">
-    {{ $paginator := .Paginator }}
     {{ $paginator := .Paginate (where .Paginator.Pages ".Params.featured" "!=" true ) }}
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
-      {{ range $paginator.Pages }}
+      {{ range after 1 $paginator.Pages }}
         {{ partial "card-post.html" . }}
       {{ end }}
     </div>

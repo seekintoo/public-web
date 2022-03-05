@@ -44,7 +44,7 @@
   <div class="mx-auto max-w-6xl relative">
     {{- $paginator := .Paginate (where (where .Site.RegularPages "Section" "resources") ".Params.featured" "!=" true) }}
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
-      {{ range $paginator.Pages }}
+      {{ range after 1 $paginator.Pages }}
         {{ partial "card-post.html" . }}
       {{ end }}
     </div>
