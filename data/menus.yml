@@ -55,7 +55,7 @@ navbar_center:
   blog: true
   buttons:
   # - name: Blog
-  #   url: "/blog/"
+  #   url: "/resources/"
   #   icon: document-text
   children: 
   - name: Case Studies
