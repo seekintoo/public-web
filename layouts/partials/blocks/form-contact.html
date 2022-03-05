@@ -93,19 +93,19 @@
   <script>
     document.forms.contact.addEventListener("submit", (event) => {
       event.preventDefault();
-      const jobSuccess = document.getElementById("contact-success");
-      const jobError = document.getElementById("contact-error");
+      const contactSuccess = document.getElementById("contact-success");
+      const contactError = document.getElementById("contact-error");
       fetch("/", {
         body: new FormData(event.target),
         method: "POST",
       })
         .then(() => {
-          jobSuccess.classList.remove("hidden");
-          document.forms.job.reset();
+          contactSuccess.classList.remove("hidden");
+          document.forms.contact.reset();
         })
         .catch((error) => {
-          jobError.classList.remove("hidden");
-          jobError.innerHTML = `Failed: ${error}`;
+          contactError.classList.remove("hidden");
+          contactError.innerHTML = `Failed: ${error}`;
         });
     });  
   </script>
