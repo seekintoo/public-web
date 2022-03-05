@@ -10,7 +10,7 @@ blocks:
   heading: Looking for career in cybersecurity
   subheading: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
   button:
-    text: Get Started Today
+    text: Explore Positions
     url: "#jobs"
   image: "https://dummyimage.com/1000x500"
 
