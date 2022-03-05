@@ -177,34 +177,22 @@
             <a href="{{ .Site.Data.menus.navbar_right.primary.url }}" class="ml-6 whitespace-nowrap inline-flex items-center justify-center px-4 py-2.5 border border-transparent rounded-md shadow text-base font-medium text-white bg-primary-500 hover:bg-primary-600"> {{ .Site.Data.menus.navbar_right.primary.name }} </a>
           {{ end }}
         </div>
-        <div class="absolute inset-y-0 right-0 flex items-center sm:static sm:inset-auto">
+        <div x-data="{ search: false }" @click.outside="search = false" class="hidden absolute inset-y-0 right-0 lg:flex items-center sm:static sm:inset-auto">
           <div class="relative">
-            <div>
-              <button type="button" class="bg-white rounded-full flex text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                <span class="sr-only">Open user menu</span>
+            <div class="relative">
+              <button @click.prevent="search = ! search" type="button" class="bg-white rounded-full flex text-sm focus:outline-none" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                <span class="sr-only">Open search</span>
                 <svg class="h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                   <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
                 </svg>
               </button>
             </div>
-
-            <!--
-              Dropdown menu, show/hide based on menu state.
-
-              Entering: "transition ease-out duration-200"
-                From: "transform opacity-0 scale-95"
-                To: "transform opacity-100 scale-100"
-              Leaving: "transition ease-in duration-75"
-                From: "transform opacity-100 scale-100"
-                To: "transform opacity-0 scale-95"
-            -->
-            <div class="origin-top-right absolute right-0 mt-6 w-[26rem] rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+            <div x-show="search" class="origin-top-right absolute right-0 mt-6 w-[26rem] rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
               <div class="flex-1 flex items-center justify-center lg:justify-end relative">
                 <div class="w-full">
                   <label for="search" class="sr-only">Search</label>
                   <div class="relative">
                     <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <!-- Heroicon name: solid/search -->
                       <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                         <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
                       </svg>
@@ -212,7 +200,7 @@
                     <input id="search-input" name="search" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-violet-500 focus:border-vring-violet-500 sm:text-sm" placeholder="Search" type="search">
                   </div>
                 </div>
-                <ul id="results-container" class="absolute top-12 left-0 right-0 bg-white rounded-md border border-slate-200 shadow-md"></ul>
+                <ul id="results-container" class="absolute top-12 left-0 right-0 bg-white rounded-md shadow-lg capitalize"></ul>
               </div>          
             </div>
           </div>
@@ -300,57 +288,7 @@ var sjs = SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
   json: '{{ "search.json" | relURL }}',
-  searchResultTemplate: '<li><a class="flex px-4 py-2" href="{url}">{title}</a></li>',
-	noResultsText: '<li class="no-results">No results found</li>',
+  searchResultTemplate: '<li><a class="flex px-4 py-3" href="{url}">{title}</a></li>',
+	noResultsText: '<li class="flex px-4 py-3">No results found</li>',
 });
-
-searchResults();
-
-function searchResults() {
-  var currentItem = null;
-  var search = document.getElementById("search-input");
-  var results = document.getElementById( "results-container");
-  function removeActive() {
-    for (i = 0; i < results.children.length; i++) {
-      results.children[i].classList.remove("bg-slate-100");
-    }
-  }
-  results.addEventListener("mouseover", function(event) {
-    removeActive();
-    event.target.parentElement.classList.add("bg-slate-100");
-    currentItem = null;
-  });
-  results.addEventListener("mouseout", function(event) {
-    event.target.parentElement.classList.remove("bg-slate-100");
-  });
-  search.addEventListener("keyup", function(event) {
-    var resultItems = results.children;
-    var resultCount = results.children.length;
-    if (event.keyCode === 40) {
-      if (currentItem < (resultCount - 1)) {
-        if (currentItem === null) {
-          currentItem = 0;
-        } else {
-          removeActive();
-          currentItem++;
-        }
-        removeActive();
-        resultItems[currentItem].classList.add("bg-slate-100");
-      }
-    } else if (event.keyCode === 38) {
-      if (currentItem > 0) {
-        if (currentItem === null) {
-          currentItem = 0;
-        } else {
-          removeActive();
-          currentItem--;
-        }
-        removeActive();
-        resultItems[currentItem].classList.add("bg-slate-100");
-      }
-    } else if (event.keyCode === 13) {
-      resultItems[currentItem].children[0].click();
-    }
-  });
-}
 </script>
