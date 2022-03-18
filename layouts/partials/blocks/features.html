@@ -1,4 +1,4 @@
-<div class="bg-white px-4 sm:px-6 lg:px-8">
+<div id="{{ .id }}" class="bg-white px-4 sm:px-6 lg:px-8">
   <div class="mx-auto sm:max-w-xl md:max-w-full lg:max-w-6xl md:px-24 lg:px-0 py-16 lg:py-32{{ if eq .padding_remove true }} pt-0 lg:pt-0{{ end }}">
     {{ if or .heading .subheading }}
       <div class="mb-16 text-center">
@@ -24,7 +24,7 @@
                       <circle cx="12" cy="12" r="11" />
                       <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
                     </svg>
-                    <p class="ml-3">{{ . }}</p>
+                    <p class="ml-3">{{ . | safeHTML }}</p>
                   </li>
                 {{ end }}
               </ul>
@@ -37,7 +37,7 @@
           </div>
         </div>
         <div{{if (modBool $i 2)}} class="lg:order-first"{{end}}>
-          <img class="w-full rounded-lg drop-shadow-xl" src="{{ .image | absURL }}" alt="{{ .heading }}" />
+          <img class="w-full bg-gradient-to-r from-secondary-900 to-purple-900 rounded-lg drop-shadow-xl" src="{{ .image | absURL }}" alt="{{ .heading }}" />
         </div>
       </div>
     {{ end }}

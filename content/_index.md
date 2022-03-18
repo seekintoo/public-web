@@ -7,59 +7,30 @@ description: "Front page description"
 blocks:
   - block: hero
     superheading: Welcome to Seekintoo
-    heading: Technology Alone Won’t <mark>Keep You Safe</mark>
-    subheading: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
+    heading: Cybersecurity <mark>Medicine</mark>
+    subheading: "Get your cybersecurity mojo back! Side effects may include: business growth, customer trust, and true inner peace."
     button:
-      text: Get Started Today
-      url: "#"
+      text: Show Me!
+      url: "#cyber-not-soft"
     image: "https://dummyimage.com/1000x500"
-
-  - block: feature-centered
-    superheading: Security
-    heading: Elit fugiat veniam occaecat
-    subheading: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
-    image: "https://dummyimage.com/1220x900"
-
-  - block: cards-2
-    superheading: Security
-    heading: Elit fugiat veniam occaecat
-    subheading: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
-    cards:
-      - heading: Lorem ipsum dolorem occaecat irure lorem occaecat
-        superheading: Occaecat irure qui lorem cupidatat commodo
-        text: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
-        icon: "https://dummyimage.com/70x70"
-        button:
-          text: Learn More
-          url: "#"
-      - heading: Lorem ipsum dolorem occaecat irure lorem occaecat
-        superheading: Elit fugiat veniam occaecat irure qui lorem
-        text: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
-        icon: "https://dummyimage.com/70x70"
-        button:
-          text: Learn More
-          url: "#"
-
   - block: features
-    padding_remove: true
-    heading: Challenges
-    subheading: Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.
+    heading: "Cybersecurity ≠ Alphabet Soup"
+    id: cyber-not-soft
+    subheading: XDR, MDR, EDR, SOAR. Toto, I don't think we're in Kansas anymore.
     features:
-      - heading: Anim aute id magna
+      - heading: The Art of Cybersecurity
         text: |-
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        image: "https://dummyimage.com/600x600/999/999"
+           It's not opinion: as technology advances, so too will the risk of cyber incidents. The reliance on technology will increase and cybersecurity will play a leading role in reducing risk.
+        image: /images/art_1.png
         list:
-          - Lorem ipsum dolor sit amet
-          - Lorem ipsum dolor sit amet
-      - heading: Anim magna aliqua commodo
+          - Defense <b>starts</b> with knowing your offense.
+          - <b>Winning</b> is about adaptation under stress.
+      - heading: Adapt to the Unpredictable
         text: |-
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        image: "https://dummyimage.com/600x600/999/999"
+          Seekintoo is enterprise class, adaptive cybersecurity: on-time, and on-call.  Contact us to see what world-class cybersecurity maintenance means.
+        image: /images/art_2.png
         button:
-          text: Get Started Today
+          text: What is Adaptive Cybersecurity?
           url: "#"
 
   - block: cards-3

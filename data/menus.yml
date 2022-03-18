@@ -78,6 +78,7 @@ navbar_center:
     url: "/terms/"
     icon: library
     desc: Lorem ipsum doloren sulum talem
+
 - name: Contact
   url: "/#contact"
   children: []
