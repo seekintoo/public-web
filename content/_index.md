@@ -1,6 +1,6 @@
 ---
 layout: blocks
-title: Home
+title: Seekintoo
 url: ""
 description: "Front page description"
 
@@ -20,72 +20,40 @@ blocks:
     features:
       - heading: The Art of Cybersecurity
         text: |-
-           It's not opinion: as technology advances, so too will the risk of cyber incidents. The reliance on technology will increase and cybersecurity will play a leading role in reducing risk.
+           It's not opinion: the pace of technology adoption is unceasing, and the lines between business and technology have dissolved. The unpredictable nature, and fundamental risk of cyber incidents will increase steadily, and cybersecurity will play a universal role in progress.
         image: /images/art_1.png
         list:
-          - Defense <b>starts</b> with knowing your offense.
-          - <b>Winning</b> is about adaptation under stress.
-      - heading: Adapt to the Unpredictable
+          - Good defense <b>starts</b> with knowing your offense.
+          - To <b>win every time</b>, you need to learn, adapt and grow; even under pressure!
+      - heading: Adapting to Unpredictable
         text: |-
-          Seekintoo is enterprise class, adaptive cybersecurity: on-time, and on-call.  Contact us to see what world-class cybersecurity maintenance means.
+          Seekintoo is enterprise class, adaptive cybersecurity: on-time, and on-call.  Contact us now to see what world-class cybersecurity maintenance means.
         image: /images/art_2.png
         button:
           text: What is Adaptive Cybersecurity?
           url: "#"
 
-  - block: cards-3
-    superheading: Security
-    heading: Elit fugiat veniam occaecat
-    subheading: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
-    cards:
-      - heading: Lorem ipsum dolorem
-        text: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
-        icon: "https://dummyimage.com/70x70"
-        button:
-          text: Learn More
-          url: "#"
-      - heading: Lorem ipsum dolorem
-        text: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
-        icon: "https://dummyimage.com/70x70"
-        button:
-          text: Learn More
-          url: "#"
-      - heading: Lorem ipsum dolorem
-        text: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
-        icon: "https://dummyimage.com/70x70"
-        button:
-          text: Learn More
-          url: "#"
 
-  - block: feature-right
-    padding_remove: true
-    superheading: Security
-    heading: Elit fugiat veniam occaecat
-    subheading: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
-    image: "https://dummyimage.com/2500x2000/999/999"
-    button:
-      text: Learn more
-      url: "#"
 
   - block: cards-4
     superheading: Security
-    heading: Elit fugiat veniam occaecat
-    subheading: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
+    heading: Services Designed for Growth
+    subheading: You need your cyber defense to stay sharp. That's why we push the limits of "adapt and respond." We don't sell or underpin any of our services with proprietary licenses. Each foundational service works together or apart. We can design, build, and run a world-class cybersecurity maintenance program for you.
     cards:
-    - heading: Lorem ipsum dolorem
-      text: Anim aute id magna aliqua ad ad non deserunt sunt. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
+    - heading: CYBERSOC
+      text: Our flagship service can collect, monitor, sample, and dissect your machine generated data; from the cloud to OT/IOT. Specific AI, and real-world experts use a common data platform (CDP) and our adaptive framework to find suspicious patterns, and disrupt attacks against your business. 24x7. Forensic and critical response are options too!
       icon: "https://dummyimage.com/70x70"
       link:
         text: Learn more
         url: "#"
-    - heading: Lorem ipsum dolorem
-      text: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
+    - heading: CYBERTEST
+      text: To avoid becoming a cyberattack statistic, you need to focus on a targeted response to emerging threats, not patching legacy defensive layers. CYBERTEST simulates known and novel threats against your business to provide key information on adapting your defense. Available as a service, or delivered traditionally to meet your scope.
       icon: "https://dummyimage.com/70x70"
       link:
         text: Learn more
         url: "#"
-    - heading: Lorem ipsum dolorem
-      text: Anim aute id magna aliqua ad ad non deserunto. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
+    - heading: CYBERNAV
+      text: Dependable, and expert resources can build you a private CDP, or help navigate critical or supporting features of your cybersecurity maintenance program, model and map regulatory compliance, or design it from the ground up. A fresh, constructive, and outside perspective is budget well-spent to keep a false sense of security in check!
       icon: "https://dummyimage.com/70x70"
       link:
         text: Learn more
@@ -93,74 +61,34 @@ blocks:
 
   - block: logos
     padding_remove: true
-    heading: Our Clients
-    subheading: Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.
+    heading: A Love for Open Source
+    subheading: "The world runs on open source! Investing in adaptation and integration provides the edge we need vs. closed and monolithic solutions. You can't afford to solve \"now\" problems with \"tomorrow\" solutions. Working with these open source projects lets us close the gap between now and tomorrow faster:"
+
     logos:
-    - "https://dummyimage.com/250x100"
-    - "https://dummyimage.com/250x100"
-    - "https://dummyimage.com/250x100"
-    - "https://dummyimage.com/250x100"
-    - "https://dummyimage.com/250x100"
-    - "https://dummyimage.com/250x100"
-    - "https://dummyimage.com/250x100"
-    - "https://dummyimage.com/250x100"
+    - "/images/elastic_open.png"
+    - "/images/proxmox_open.png"
+    - "/images/kubernetes_open.png"
+    - "/images/thehive_open.svg"
+    - "/images/misp_open.png"
+    - "/images/jupyter_open.svg"
+    - "/images/spark_open.png"
+    - "/images/osquery_open.png"
 
   - block: cta-2
-    text: Anim aute id magna aliqua ad ad non deserunt sunt irure lorem.
+    text: Interested in more awesome cybersecurity open source?
     button:
-      text: Get Started
-      url: "#"
+      text: Learn More
+      url: "https://github.com/jivoi/awesome-ml-for-cybersecurity"
 
   - block: posts
     padding_remove: false
     heading: Latest Resources
-    subheading: Lorem Ipsum is simply dummy text of the printing and typesetting industry of the printing and typesetting industry
+    subheading: We're making cybersecurity open and adaptive! Find out what we're up to!
 
-  - block: cards-5  
-    padding_remove: true
-    heading: Alt features block
-    subheading: Use icons and shorter text descriptions, is simply dummy text of the printing and typesetting industry.
-    features:
-    - heading: Unified One View
-      icon: chat
-      text: |-
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      image: "https://dummyimage.com/50x50/bae7fd"
-    - heading: Transaction Volumes
-      icon: beaker
-      text: |-
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      image: "https://dummyimage.com/50x50/bae7fd"
-    - heading: Accounting Challenges
-      icon: badge-check
-      text: |-
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      image: "https://dummyimage.com/50x50/bae7fd"
-    - heading: Regulatory Requirements
-      icon: calendar
-      text: |-
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      image: "https://dummyimage.com/50x50/bae7fd"
-    - heading: Legacy Limitations
-      icon: check
-      text: |-
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      image: "https://dummyimage.com/50x50/bae7fd"
-    - heading: Some Other Title
-      icon: cloud
-      text: |-
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      image: "https://dummyimage.com/50x50/bae7fd"
-
+  
   - block: testimonials
     padding_remove: true
-    heading: Have questions?
+    heading: Testimonials
     subheading: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
     testimonials:
     - name: Judith Black
@@ -181,9 +109,7 @@ blocks:
       image: "https://dummyimage.com/300"
 
   - block: form-contact
-    padding_remove: true
     heading: Have questions?
-    subheading: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
-
+    subheading: If you can't find it on our site, send us a quick note! We'll make sure it gets to the right place!
 
 ---

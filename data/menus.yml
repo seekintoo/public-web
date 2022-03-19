@@ -19,17 +19,17 @@ navbar_center:
     icon: mail
   children:
   - name: CYBERSOC
-    url: "/cybersoc"
+    url: "/soc/"
+    icon: eye
+    desc: Watch - Notify - Disrupt
+  - name: CYBERTEST
+    url: "/testing/"
     icon: shield
-    desc: Lorem ipsum doloren sulum talem
-  - name: Penetration Testing
-    url: "/penetration-testing/"
-    icon: lock-closed
-    desc: Lorem ipsum doloren sulum talem
-  - name: Risk & Advisory
-    url: "/risk-advisory/"
-    icon: exclamation
-    desc: Lorem ipsum doloren sulum talem
+    desc: Advanced Threat Simulation
+  - name: CYBERNAV
+    url: "/ps/"
+    icon: star
+    desc: Integrated Consulting
 - name: Company
   buttons:
   - name: Get An Estimate
@@ -42,15 +42,12 @@ navbar_center:
   - name: About Us
     url: "/about/"
     icon: home
-    desc: Lorem ipsum doloren sulum talem
-  - name: Team
+  - name: Our Team
     url: "/team/"
     icon: users
-    desc: Lorem ipsum doloren sulum talem
   - name: Careers
     url: "/careers/"
     icon: academic-cap
-    desc: Lorem ipsum doloren sulum talem
 - name: Resources
   blog: true
   buttons:
@@ -58,26 +55,26 @@ navbar_center:
   #   url: "/resources/"
   #   icon: document-text
   children: 
-  - name: Case Studies
-    url: "/categories/case-studies/"
+  - name: Articles
+    url: "/categories/articles/"
     icon: document-text
-    desc: Lorem ipsum doloren sulum talem
+    desc: Insights, opinions, news and more!
   - name: Whitepapers
     url: "/categories/whitepapers/"
     icon: document-text
-    desc: Lorem ipsum doloren sulum talem
-  - name: Solution Breifs
-    url: "/categories/solution-breifs/"
+    desc: Time-savers, and lessons learned
+  - name: Solution Briefs
+    url: "/categories/solution-briefs/"
     icon: document-text
-    desc: Lorem ipsum doloren sulum talem    
+    desc: Service specifications and goals   
   - name: Videos
     url: "/videos/"
     icon: play
-    desc: Lorem ipsum doloren sulum talem
+    desc: Mostly having fun
   - name: Term and Conditions
     url: "/terms/"
     icon: library
-    desc: Lorem ipsum doloren sulum talem
+    desc: TBD
 
 - name: Contact
   url: "/#contact"
@@ -86,7 +83,7 @@ navbar_center:
 navbar_right:
   secondary:
     name: Portal
-    url: "#"
+    url: "https://reports.seekintoo.com"
   primary:
     name: Get An Estimate
     url: "/estimate/"
@@ -94,22 +91,22 @@ navbar_right:
 footer:
 - heading: What we do
   menu:
-  - name: CYBERSOC
-    url: "/cybersoc"
+  - name: Managed Cybersecurity
+    url: "/soc"
   - name: Penetration Testing
-    url: "/penetration-testing/"
-  - name: Risk & Advisory
-    url: "/risk-advisory/"
+    url: "/testing"
+  - name: Consulting
+    url: "/ps"
 
 - heading: How we do it
   menu:
-  - name: Lorem umen
+  - name: Open Source
     url: "#"
-  - name: Ipsum dolor
+  - name: Vision and Values
     url: "#"
-  - name: Dolorem 
+  - name: Adaptive Cybersecurity
     url: "#"
-  - name: Loremus
+  - name: Common Data Platform (CDP)
     url: "#"
 
 - heading: Resources
@@ -127,7 +124,7 @@ footer:
   menu:
   - name: About Us
     url: "/about/"
-  - name: Team
+  - name: Our Team
     url: "/team/"
   - name: Careers
     url: "/careers/"

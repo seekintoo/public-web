@@ -7,17 +7,17 @@ paginate = 6
   categories = "categories"
   
 [params]
-description = "Anim aute id magna aliqua adadnon polonem asum nuerom deserunt sunt."
+description = "Trusted cybersecurity services since 2012"
 logo = "/images/logo.png"
 logo_light = "/images/logo-light.png"
 copyright = "Copyright © 2022 Seekintoo"
+banner_text = "Banner"
+banner_url = "#"
 
 [params.gated]
   heading = "Get the Xyz content"
   subheading ="Anim aute id magna aliqua adadnon polonem dolorem ipsumer amorom deole asum nuerom deserunt sunt."
 
-# banner_text = "Excepteur sint occaecat cupidatat proident officia deserunt"
-# banner_url = "#"
 
 [outputFormats.search]
 baseName = "search"
