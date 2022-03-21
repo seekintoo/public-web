@@ -11,9 +11,9 @@
       {{ range .cards }}
         <div class="relative rounded-md rounded-br-4xl drop-shadow-md hover:drop-shadow-xl border border-secondary-300 overflow-hidden bg-white p-8 flex flex-col justify-between">
           <div class="flex-1">
-            {{ if .icon }}
-              <img class="mb-5" src="{{ .icon | absURL }}" alt="{{ .heading }}">
-            {{ end }}
+            <a href="{{ .url | relURL }}" class="text-violet-700">
+              {{ $icon := (printf "%s%s%s" "icons/" .icon ".svg" ) }}
+              {{ partial $icon . }}
             <h3 class="text-xl font-semibold text-secondary-900">{{ .heading }}</h3>
             <p class="mt-3 text-base text-gray-600">{{ .text }}</p>
           </div>

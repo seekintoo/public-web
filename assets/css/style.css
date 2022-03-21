@@ -2215,6 +2215,11 @@ select {
   stroke-width: 2;
 }
 
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -2371,6 +2376,10 @@ select {
   padding-right: 3rem;
 }
 
+.pl-4 {
+  padding-left: 1rem;
+}
+
 .pl-10 {
   padding-left: 2.5rem;
 }
@@ -2401,10 +2410,6 @@ select {
 
 .pb-8 {
   padding-bottom: 2rem;
-}
-
-.pl-4 {
-  padding-left: 1rem;
 }
 
 .pr-8 {
@@ -2775,6 +2780,11 @@ select {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.grayscale {
+  --tw-grayscale: grayscale(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .transition {
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -2815,6 +2825,10 @@ mark {
   background-color: transparent;
   --tw-text-opacity: 1;
   color: rgb(174 173 240 / var(--tw-text-opacity));
+}
+
+@media (min-width:991px) {
+  background-color: black;
 }
 
 .hover\:border-slate-300:hover {
@@ -3439,8 +3453,8 @@ mark {
     left: 0px;
   }
 
-  .lg\:-left-16 {
-    left: -4rem;
+  .lg\:-left-4 {
+    left: -1rem;
   }
 
   .lg\:order-first {
@@ -3578,8 +3592,8 @@ mark {
     height: 100%;
   }
 
-  .lg\:w-0 {
-    width: 0px;
+  .lg\:h-3\/4 {
+    height: 75%;
   }
 
   .lg\:w-full {
@@ -3882,5 +3896,25 @@ mark {
   .xl\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+}
+
+@media (max-height: 450px) {
+  .s-a-f\:block {
+    display: block;
+  }
+
+  .s-a-f\:hidden {
+    display: none;
+  }
+}
+
+@media (max-width: 350px) {
+  .n-a-f\:block {
+    display: block;
+  }
+
+  .n-a-f\:hidden {
+    display: none;
   }
 }

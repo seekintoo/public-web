@@ -32,6 +32,10 @@ module.exports = {
       },      
       maxWidth: {
         'screen-2xl': '1340px'
+      },
+      screens: {
+        's-a-f': { 'raw': '(max-height: 450px)'},
+        'n-a-f': { 'raw': '(max-width: 350px)'},
       }
     },
   },

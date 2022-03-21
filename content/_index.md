@@ -42,19 +42,19 @@ blocks:
     cards:
     - heading: CYBERSOC
       text: Our flagship service can collect, monitor, sample, and dissect your machine generated data; from the cloud to OT/IOT. Specific AI, and real-world experts use a common data platform (CDP) and our adaptive framework to find suspicious patterns, and disrupt attacks against your business. 24x7. Forensic and critical response are options too!
-      icon: "https://dummyimage.com/70x70"
+      icon: eye
       link:
         text: Learn more
         url: "#"
     - heading: CYBERTEST
       text: To avoid becoming a cyberattack statistic, you need to focus on a targeted response to emerging threats, not patching legacy defensive layers. CYBERTEST simulates known and novel threats against your business to provide key information on adapting your defense. Available as a service, or delivered traditionally to meet your scope.
-      icon: "https://dummyimage.com/70x70"
+      icon: shield
       link:
         text: Learn more
         url: "#"
     - heading: CYBERNAV
       text: Dependable, and expert resources can build you a private CDP, or help navigate critical or supporting features of your cybersecurity maintenance program, model and map regulatory compliance, or design it from the ground up. A fresh, constructive, and outside perspective is budget well-spent to keep a false sense of security in check!
-      icon: "https://dummyimage.com/70x70"
+      icon: star
       link:
         text: Learn more
         url: "#"

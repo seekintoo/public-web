@@ -4,12 +4,15 @@
     {{ partial "head.html" . }}
 </head>
 <body>
-    {{ if .Site.Params.banner_text }}
-        {{ partial "banner.html" . }}
-    {{ end }}
-    {{ partial "navbar.html" . }}
-    {{ block "main" . }}{{ end }}
-    {{ partial "footer.html" . }}
+    <div class="hidden s-a-f:block n-a-f:block">Browser viewport too small.</div>
+    <div class="s-a-f:hidden n-a-f:hidden">
+        {{ if .Site.Params.banner_text }}
+            {{ partial "banner.html" . }}
+        {{ end }}
+        {{ partial "navbar.html" . }}
+        {{ block "main" . }}{{ end }}
+        {{ partial "footer.html" . }}
+    </div>
 </body>
 </html>
 

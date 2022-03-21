@@ -4,7 +4,7 @@ summary: Lorem Ipsum is simply dummy text of the industry. Lorem ipsum, or lips
 date: 2021-08-04T04:00:00+00:00
 image: https://dummyimage.com/500x300
 categories:
-- solution breifs
+- solution briefs
 - whitepapers
 ---
 

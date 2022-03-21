@@ -5,7 +5,8 @@ date: 2021-08-04T04:00:00+00:00
 image: https://dummyimage.com/500x300
 categories:
 - whitepapers
-- solution breifs
+- solution briefs
+- articles
 ---
 
 Faucibus commodo massa rhoncus, volutpat. **Dignissim** sed **eget risus enim**. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. [Mattis mauris semper](#) sed amet vitae sed turpis id.

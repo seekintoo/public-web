@@ -103,19 +103,19 @@ blocks:
     cards:
     - heading: Lorem ipsum dolorem
       text: Anim aute id magna aliqua ad ad non deserunt sunt. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
-      icon: "https://dummyimage.com/70x70"
+      icon: eye
       link:
         text: Learn more
         url: "#"
     - heading: Lorem ipsum dolorem
       text: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
-      icon: "https://dummyimage.com/70x70"
+      icon: eye
       link:
         text: Learn more
         url: "#"
     - heading: Lorem ipsum dolorem
       text: Anim aute id magna aliqua ad ad non deserunto. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
-      icon: "https://dummyimage.com/70x70"
+      icon: eye
       link:
         text: Learn more
         url: "#"
