@@ -1614,6 +1614,10 @@ select {
   max-width: 36rem;
 }
 
+.max-w-full {
+  max-width: 100%;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -2825,10 +2829,6 @@ mark {
   background-color: transparent;
   --tw-text-opacity: 1;
   color: rgb(174 173 240 / var(--tw-text-opacity));
-}
-
-@media (min-width:991px) {
-  background-color: black;
 }
 
 .hover\:border-slate-300:hover {

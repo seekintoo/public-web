@@ -67,7 +67,7 @@
                           <div class="px-5 py-5 bg-white space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
                             {{ range .buttons }}
                               <div class="flow-root w-1/2">
-                                <a href="{{ .url | relURL }}" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-slate-500 hover:text-violet-700 hover:bg-secondary-50">
+                                <a href="{{ .url | relURL }}" @click="dropdown = false" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-slate-500 hover:text-violet-700 hover:bg-secondary-50">
                                   {{ $icon := (printf "%s%s%s" "icons/" .icon ".svg" ) }}
                                   {{ partial $icon . }}
                                   <span class="ml-3">{{ .name }}</span>
@@ -149,7 +149,7 @@
                       <div class="px-5 py-5 bg-white space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
                         {{ range .buttons }}
                           <div class="flow-root w-1/2">
-                            <a href="{{ .url | relURL }}" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-slate-500 hover:text-violet-700 hover:bg-secondary-50">
+                            <a href="{{ .url | relURL }}" @click="dropdown = false" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-slate-500 hover:text-violet-700 hover:bg-secondary-50">
                               {{ $icon := (printf "%s%s%s" "icons/" .icon ".svg" ) }}
                               {{ partial $icon . }}
                               <span class="ml-3">{{ .name }}</span>
@@ -257,7 +257,7 @@
                   </div>
                 {{ else }}
                   <div class="p-3 pl-0">
-                    <a href="{{ if in .url "http" }}{{ .url }}{{ else }}{{ .url | relURL }}{{ end }}" class="-m-3 p-3 flex items-center rounded-md hover:bg-secondary-50 text-secondary-900 hover:text-violet-800" 
+                    <a href="{{ if in .url "http" }}{{ .url }}{{ else }}{{ .url | relURL }}{{ end }}" @click="mobile = false" class="-m-3 p-3 flex items-center rounded-md hover:bg-secondary-50 text-secondary-900 hover:text-violet-800" 
                       {{ if in .url "http" }} target="_blank"{{ end }}>
                       <span class="text-lg font-semibold"> {{ .name }} </span>
                     </a>

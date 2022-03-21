@@ -4,3 +4,4 @@ public
 package-lock.json
 content/.DS_Store
 .hugo_build.lock
+_gen

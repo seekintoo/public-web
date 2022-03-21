@@ -4,10 +4,10 @@
     {{ if or .heading .subheading }}
       <div class="text-center mb-10">
         {{ with .heading }}
-          <h2 class="text-4xl font-bold leading-tight text-secondary-900 md:text-5xl">{{ . }}</h2>
+          <h2 class="text-4xl font-bold leading-tight text-secondary-900 md:text-5xl text">{{ . }}</h2>
         {{ end }}
         {{ with .subheading }}
-          <p class="mt-6 max-w-2xl text-xl text-slate-500 lg:mx-auto">{{ . }}</p>
+          <p class="mt-6 text-xl text-slate-500 lg:mx-auto">{{ . }}</p>
         {{ end }}
       </div>
     {{ end }}

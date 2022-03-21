@@ -38,7 +38,7 @@ blocks:
   - block: cards-4
     superheading: Security
     heading: Services Designed for Growth
-    subheading: You need your cyber defense to stay sharp. That's why we push the limits of "adapt and respond." We don't sell or underpin any of our services with proprietary licenses. Each foundational service works together or apart. We can design, build, and run a world-class cybersecurity maintenance program for you.
+    subheading: You need your cyber defense to stay sharp. That's why we push the limits of "adapt and respond." We don't sell or underpin any of our services with proprietary licenses. Each foundational service works together or apart. Let us design, build, and run a world-class cybersecurity maintenance program for you!
     cards:
     - heading: CYBERSOC
       text: Our flagship service can collect, monitor, sample, and dissect your machine generated data; from the cloud to OT/IOT. Specific AI, and real-world experts use a common data platform (CDP) and our adaptive framework to find suspicious patterns, and disrupt attacks against your business. 24x7. Forensic and critical response are options too!

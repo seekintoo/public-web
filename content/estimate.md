@@ -6,7 +6,7 @@ description: 'Page description'
 
 blocks:
 - block: form-estimate
-  heading: Get An Estimate
-  subheading: Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
+  heading: Get an Estimate
+  subheading: We're working hard to bring you a static pricing page, and TCO calculator for our services! In the mean-time, please fill in some details about your organization and our team can work with you to get you an estimate!
   
 ---
