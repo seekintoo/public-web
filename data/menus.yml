@@ -21,7 +21,7 @@ navbar_center:
   - name: CYBERSOC
     url: "/soc/"
     icon: eye
-    desc: Watch - Notify - Disrupt
+    desc: Adaptive Awareness
   - name: CYBERTEST
     url: "/testing/"
     icon: shield

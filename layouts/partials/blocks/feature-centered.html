@@ -1,5 +1,5 @@
-<div class="relative bg-red-50 pt-16 overflow-hidden lg:pt-32 px-4 sm:px-6 lg:px-8">
-  <div class="mx-auto max-w-md text-center sm:max-w-3xl lg:max-w-6xl">
+<div class="relative bg-red-50 pt-16 overflow-hidden lg:pt-16 px-4 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-md text-center sm:max-w-3xl lg:max-w-4xl">
     <div>
       {{ with .superheading }}
         <p class="text-base font-semibold tracking-widest text-indigo-600 uppercase mb-2">{{ . }}</p>
@@ -9,8 +9,8 @@
         <p class="mt-5 max-w-prose mx-auto text-xl text-gray-500">{{ . }}</p>
       {{ end }}
     </div>
-    <div class="mt-12 -mb-10 sm:-mb-24 lg:-mb-80">
-      <img class="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5" src="{{ .image | absURL }}" alt="{{ .heading }}">
+    <div class="mt-12 -mb-10 sm:-mb-24 lg:-mb-40">
+      <img class="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 bg-gradient-to-r from-secondary-900 to-purple-900 p-10" src="{{ .image | absURL }}" alt="{{ .heading }}">
     </div>
   </div>
 </div>
